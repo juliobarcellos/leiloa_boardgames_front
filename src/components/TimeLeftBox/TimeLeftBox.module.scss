@@ -1,0 +1,23 @@
+.timeLeftBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.digitos{
+    background-color: #FAFAFA;
+    color: #223263;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 4px;
+    width: 2rem;
+    text-align: center;
+}
+
+.separador{
+    font-weight: bold;
+    color: #FAFAFA;
+    padding: 4px;
+    text-align: center;
+}

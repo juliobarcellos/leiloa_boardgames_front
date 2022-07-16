@@ -1,0 +1,27 @@
+.menu{
+    align-items: center;
+    border-bottom: 1px solid #ABB4BD;
+    display: flex;
+    width: 100%;
+}
+
+.menu__link{
+    align-items: center;
+    color: #ABB4BD;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1.2rem;
+    text-decoration: none;
+    &:hover {
+        color: #EF3651;
+    }
+} 
+
+.menu__link--Ativo{
+    align-items: center;
+    color: #EF3651;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1.2rem;
+    text-decoration: none;
+}

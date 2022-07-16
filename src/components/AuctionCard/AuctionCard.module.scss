@@ -1,0 +1,51 @@
+.auctionCard {
+    border: 2px solid #EBF0FF;
+    border-radius: 1rem;
+    background-color: #2A2C36;
+    padding: 1rem;
+    width: 192px;
+    margin: 1rem;
+    color: #FAFAFA;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__img {
+        border-radius: 10px;
+        height: 180px;
+        width: 180px;
+        align-self: center;
+    }
+
+    &__title {
+        margin-top: 0.5rem;
+    }
+
+    &__price {
+        color: #55D85A;
+    }
+
+    &__link {
+        border-radius: 1rem;
+        font-size: 0.95rem;
+        color: #EBF0FF;
+        background-color: #EF3651;
+        border-color: #EF3651;
+        align-self: center;
+        margin-top: 1rem;
+        padding: 0.2rem;
+        width: 100%;
+
+        :disabled {
+            background-color: #C12F45;
+            border-color: #EF3651;
+        }
+    }
+
+    &__timeLeft {
+        font-weight: normal;
+    }
+}

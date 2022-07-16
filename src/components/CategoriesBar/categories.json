@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "icon": "MdAccountBalance",
+        "name": "Temáticos"
+    },
+    {
+        "id": 2,
+        "icon": "MdOutlineCasino",
+        "name": "Alocação de Dados"
+    },
+    {
+        "id": 3,
+        "icon": "FaChessKnight",
+        "name": "Estratégicos"
+    },
+    {
+        "id": 4,
+        "icon": "FaGift",
+        "name": "Party Games"
+    },
+    {
+        "id": 5,
+        "icon": "MdGroups",
+        "name": "Família"
+    },
+    {
+        "id": 6,
+        "icon": "MdGroup",
+        "name": "Para 2 Players"
+    },
+    {
+        "id": 7,
+        "icon": "GiPistolGun",
+        "name": "Guerra"
+    },
+    {
+        "id": 8,
+        "icon": "MdStarRate",
+        "name": "Top Jogos"
+    },
+    {
+        "id": 9,
+        "icon": "FaPeopleCarry",
+        "name": "Cooperativos"
+    },
+    {
+        "id": 10,
+        "icon": "MdRepeatOne",
+        "name": "Jogos Solo"
+    },
+    {
+        "id": 11,
+        "icon": "GiPokerHand",
+        "name": "Card Games"
+    }
+]
