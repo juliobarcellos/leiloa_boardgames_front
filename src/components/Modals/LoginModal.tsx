@@ -4,6 +4,7 @@ import { ReactComponent as PasswordIcon } from '../assets/padlock.svg';
 import InputWithIcon from './InputWithIcon';
 import { AuthFunction } from '../../types';
 import ModalRWD from './ModalRWD';
+import styles from './Modals.module.scss';
 
 
 interface LoginModalProps {
@@ -50,10 +51,10 @@ const LoginModal: React.FC<LoginModalProps> = ({
           type="password"
           icon={<PasswordIcon width="24px" height="24px" fill="white" />}
         />
-        {loginError && <p>{loginError}</p>}
-        <div>
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={() => onLoginRequested({ password, login })}>Login</button>
+        {loginError && <div className={styles.Error}>{loginError}</div>}
+        <div className={styles.ButtonContainer}>
+          <button className={styles.Button} onClick={onClose}>Cancel</button>
+          <button className={styles.Button} onClick={() => onLoginRequested({ password, login })}>Login</button>
         </div>
       </>
     </ModalRWD>

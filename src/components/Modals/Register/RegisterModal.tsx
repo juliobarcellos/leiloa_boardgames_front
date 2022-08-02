@@ -2,9 +2,11 @@ import { useState } from 'react';
 import InputWithIcon from "../InputWithIcon";
 import ModalRWD from "../ModalRWD";
 import { AuthFunction } from "../../../types";
-import { ReactComponent as LoginIcon } from '../../../assets/user.svg';
-import { ReactComponent as PasswordIcon } from '../../../assets/padlock.svg';
 import { Link } from 'react-router-dom';
+import { FiMail, FiUser } from 'react-icons/fi';
+import { RiLock2Line, RiFacebookBoxFill, RiTwitterFill } from 'react-icons/ri';
+import { FcGoogle } from 'react-icons/fc';
+import styles from '../Modals.module.scss';
 
 interface RegisterModalProps {
   onClose: () => void;
@@ -21,6 +23,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
 }) => {
 
   const [login, setLogin] = useState('')
+  const [mail, setMail] = useState('')
   const [passwordRepeat, setPasswordRepeat] = useState('');
   const [password, setPassword] = useState('');
   const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
@@ -51,8 +54,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
     <ModalRWD
       onBackdropClick={onClose}
       isModalVisible={isModalVisible}
-      header="Register"
-      message="You can register here"
+      header="Novo Usuário"
+      message="Crie sua conta"
     >
       <>
         <InputWithIcon
@@ -60,30 +63,56 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           value={login}
           onChange={e => setLogin(e.target.value)}
           type="text"
-          icon={<LoginIcon width="24px" height="24px" fill="white" />}
+          placeholder='Nome Completo'
+          icon={<FiUser size={24} />}
+        />
+        <InputWithIcon
+          onKeyDown={onKeyDown}
+          value={mail}
+          onChange={e => setMail(e.target.value)}
+          type="mail"
+          placeholder='Digite seu Email'
+          icon={<FiMail size={24} />}
+        />
+        <InputWithIcon
+          onKeyDown={onKeyDown}
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          type="password"
+          placeholder='Digite sua senha'
+          icon={<RiLock2Line size={24} />}
         />
         <InputWithIcon
           onKeyDown={onKeyDown}
           value={passwordRepeat}
           onChange={e => setPasswordRepeat(e.target.value)}
           type="password"
-          icon={<PasswordIcon width="24px" height="24px" fill="white" />}
+          placeholder='Digite sua senha novamente'
+          icon={<RiLock2Line size={24} />}
         />
-        <InputWithIcon
-          onKeyDown={onKeyDown}
-          onChange={e => setPassword(e.target.value)}
-          type="password"
-          icon={<PasswordIcon width="24px" height="24px" fill="white" />}
-        />
+        <button className={styles.Button} onClick={onRegisterTrigger}>Iniciar Cadastro</button>
         {registerError && <p>{registerError}</p>}
         {localRegisterError && <p>{localRegisterError}</p>}
-        <div>
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={onRegisterTrigger}>Register</button>
+
+        <div className={styles.OrLine2}>ou</div>
+        <p className={styles.SocialLoginTitle}>Cadastre-se usando as redes sociais:</p>
+        <div className={styles.SocialLoginContainer}>
+          <a className={styles.SocialLoginBox} href='#'>
+            <FcGoogle />
+          </a>
+          <a className={styles.SocialLoginBox} href='#'>
+            <RiFacebookBoxFill color='blue' />
+          </a>
+          <a className={styles.SocialLoginBox} href='#'>
+            <RiTwitterFill color='#1DA1F2' />
+          </a>
         </div>
-        <div>
-          <Link to="/login">Login</Link>
-          <Link to="/forgot_password">Forgot password</Link>
+
+        <div className={styles.ModalLinks}>
+          <div>
+            Já possui conta?
+            <Link to="/login">Fazer Login</Link>
+          </div>
         </div>
       </>
     </ModalRWD>

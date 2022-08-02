@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import InputWithIcon from "../InputWithIcon";
 import ModalRWD from "../ModalRWD";
-import { AuthFunction, ResetPasswordFunction } from "../../../types";
-import { ReactComponent as LoginIcon } from '../../../assets/user.svg';
-import { ReactComponent as PasswordIcon } from '../../../assets/padlock.svg';
-import { Link } from 'react-router-dom';
+import { ResetPasswordFunction } from "../../../types";
+import { FiMail } from 'react-icons/fi';
+import styles from '../Modals.module.scss';
 
 interface RegisterModalProps {
   onClose: () => void;
@@ -39,8 +38,8 @@ const ForgotPasswordModal: React.FC<RegisterModalProps> = ({
     <ModalRWD
       onBackdropClick={onClose}
       isModalVisible={isModalVisible}
-      header="Forgot password"
-      message="You can reset password here"
+      header="Esqueceu a senha?"
+      message="Digite seu e-mail que enviaremos o link para alterar a senha"
     >
       <>
         <InputWithIcon
@@ -48,16 +47,10 @@ const ForgotPasswordModal: React.FC<RegisterModalProps> = ({
           value={login}
           onChange={e => setLogin(e.target.value)}
           type="text"
-          icon={<LoginIcon width="24px" height="24px" fill="white" />}
+          placeholder='Digite seu Email'
+          icon={<FiMail size={24} />}
         />
-        <div>
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={() => onResetPasswordRequested(login)}>Reset password</button>
-        </div>
-        <div>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
-        </div>
+        <button className={styles.Button} onClick={() => onResetPasswordRequested(login)}>Enviar Email</button>
       </>
     </ModalRWD>
   )

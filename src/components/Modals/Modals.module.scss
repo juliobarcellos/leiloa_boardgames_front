@@ -1,5 +1,5 @@
-.Overlay{
-    background-color: rgba(0,0,0,0.5);
+.Overlay {
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.ModalContainer{
+.ModalContainer {
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -18,21 +18,71 @@
     position: relative;
 }
 
-.DesktopModalContainer{
-    background-color: black;
+.DesktopModalContainer {
+    background-color: #2D2E39;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 
     border-radius: 7px;
-    box-shadow: 0 0 32px rgba(0,0,0,0.5);
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
     padding: 40px;
-    width: 450px;
+    width: 375px;
     font-size: 26px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    }
 }
 
-.Header{
+.DoubleColumnModalContainer {
+    background-color: #2D2E39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    border-radius: 7px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 750px;
+    font-size: 26px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    }
+}
+
+.Header {
     color: white;
     font-size: 35px;
     line-height: 1em;
@@ -41,7 +91,7 @@
     text-align: center;
 }
 
-.Message{
+.Message {
     color: #AAA;
     font-size: 15px;
     font-weight: 500;
@@ -49,7 +99,7 @@
     text-align: center;
 }
 
-.CloseButtonContainer{
+.CloseButtonContainer {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -57,11 +107,11 @@
     border-radius: 50%;
     cursor: pointer;
 
-    & > * {
+    &>* {
         opacity: 1;
     }
 
-    &:hover > * {
+    &:hover>* {
         opacity: 0.4;
     }
 
@@ -69,14 +119,15 @@
     left: calc(100% - 20px);
 }
 
-.CloseButton{
+.CloseButton {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     color: #323232;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         position: absolute;
         left: 19px;
         top: 10px;
@@ -86,11 +137,304 @@
         background-color: #333;
 
     }
-    &::before{
+
+    &::before {
         transform: rotate(45deg);
     }
-    &::after{
+
+    &::after {
         transform: rotate(-45deg);
     }
 
+}
+
+.InputWrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    input {
+        display: block;
+        background: none;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+.DoubleColumnInputs {
+    display: flex;
+    flex-wrap: wrap;
+
+    .InputContainer {
+        width: 45%;
+    }
+
+    & :nth-child(11) {
+        transform: translateX(-54%);
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        filter: invert(1);
+    }
+
+    .Button{
+        transform: translateX(40%);
+        width: 55%;
+    }
+
+}
+
+.InputContainer {
+    color: #FAFAFA;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 96.5%;
+    font-size: 60%;
+    border: 1px solid #FAFAFA;
+    border-radius: 5px;
+    padding: 5px;
+
+    input {
+        display: block;
+        background-color: #2A2C36;
+        color: #FAFAFA;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        ::placeholder,
+        ::-webkit-input-placeholder,
+        :-ms-input-placeholder {
+            opacity: 1;
+        }
+    }
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+:-ms-input-placeholder {
+    opacity: 1;
+}
+
+.IconContainer {
+    width: 33px;
+    padding-left: 6px;
+}
+
+.ModalInput {
+    display: inline-block;
+    outline: none;
+    padding: 5px 0;
+    margin: 5px 0;
+    width: 100%;
+    text-indent: 8px;
+
+    ::placeholder,
+    ::-webkit-input-placeholder,
+    :-ms-input-placeholder {
+        opacity: 1;
+    }
+}
+
+.Error {
+    padding: 16px 0;
+    font-size: 13px;
+    color: red;
+}
+
+.ButtonContainer {
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Button {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 16px 16px;
+    line-height: 1em;
+    color: white;
+    background-color: #EF3651;
+
+    &:hover {
+        color: black;
+        background-color: white;
+        border-color: white;
+    }
+}
+
+.OrLine {
+    color: #FAFAFA;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    &::before {
+        position: absolute;
+        left: 40px;
+        top: calc(58% + 0.5rem);
+        content: ' ';
+        height: 0.5px;
+        width: 35%;
+        background-color: #EAEAEA;
+    }
+
+    &::after {
+        position: absolute;
+        right: 40px;
+        top: calc(58% + 0.5rem);
+        content: ' ';
+        height: 0.5px;
+        width: 35%;
+        background-color: #FAFAFA;
+    }
+}
+
+.OrLine2 {
+    color: #FAFAFA;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    &::before {
+        position: absolute;
+        left: 40px;
+        top: calc(68% + 0.5rem);
+        content: ' ';
+        height: 0.5px;
+        width: 35%;
+        background-color: #EAEAEA;
+    }
+
+    &::after {
+        position: absolute;
+        right: 40px;
+        top: calc(68% + 0.5rem);
+        content: ' ';
+        height: 0.5px;
+        width: 35%;
+        background-color: #FAFAFA;
+    }
+}
+
+.SocialLoginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    width: 60%;
+}
+
+.SocialLoginBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #FAFAFA;
+    padding: 0.5rem 1.1rem;
+}
+
+.ModalLinks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+
+    a {
+        margin: 0 auto;
+        padding: 0.5rem;
+        color: #EF3651;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:visited {
+            color: #EF3651;
+            text-decoration: none;
+        }
+    }
+}
+
+.SocialLoginTitle {
+    color: #FAFAFA;
+    font-size: 1rem;
+}
+
+.AddressModalContainer{
+    background-color: #2D2E39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    border-radius: 7px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 500px;
+    font-size: 26px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        content: ' ';
+        height: 20px;
+        width: 100%;
+        background-color: #EF3651;
+    } 
+}
+
+.AddressContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .Button{
+        margin-top: 1rem;
+        transform: translateX(50%);
+        width: 50%;
+    }
+
+    label{
+        font-size: 1rem;
+        width: 30%;
+    }
+}
+
+.AddressInput {
+    border-radius: 5px;
+    border: 1px solid #FAFAFA;
+    background-color: #2A2C36;
+    color: #FAFAFA;
+    padding: 5px;
+    margin: 5px 0;
+    width: 65%;
+    text-indent: 8px;
+    margin-bottom: 10px;
+    font-size: 60%;
+
+    ::placeholder,
+    ::-webkit-input-placeholder,
+    :-ms-input-placeholder {
+        opacity: 1;
+    }
 }
