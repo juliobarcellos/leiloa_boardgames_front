@@ -1,0 +1,47 @@
+@use "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.dadosLeilao{
+  margin-top: 1rem;
+  color: #F6F6F6;
+  display: flex;
+
+  &__galeria{
+    margin-right: 2rem;
+  }
+
+  &__dados{
+    width: 50%;
+  }
+}
+
+.dados__flexContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexContainer__selecionarLance, .flexContainer__valorAtualeTempoRestante, .flexContainer__SimularFrete, .flexContainer__Leiloeiro{
+  display: flex;
+  flex-direction: column;
+}
+
+.selecionarLance__select{
+  background-color: inherit;
+  border-radius: 5px;
+  color: #F6F6F6;
+  padding: 0.3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  & *{
+    background: #1E1F28;
+  }
+}
+
+.selecionarLance__button{
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  color: #F6F6F6;
+  text-decoration: underline;
+}

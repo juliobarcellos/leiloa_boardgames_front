@@ -4,6 +4,7 @@ import LoginModalWrapper from './components/Modals/Login/LoginModalWrapper';
 import RegisterModalWrapper from './components/Modals/Register/RegisterModalWrapper';
 import ForgotPasswordWrapper from './components/Modals/ForgotPassword/ForgotPasswordWrapper';
 import Home from './pages/Home';
+import AuctionPage from './pages/AuctionPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="login" element={<LoginModalWrapper />} />
           <Route path="register" element={<RegisterModalWrapper />} />
           <Route path="forgot_password" element={<ForgotPasswordWrapper />} />
+          <Route path="leilao/1" element={<AuctionPage />} />
         </Routes>
       </Router>
     </>

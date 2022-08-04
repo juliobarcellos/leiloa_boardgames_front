@@ -7,7 +7,6 @@ import { useState } from 'react';
 import LoginModalWrapper from '../Modals/Login/LoginModalWrapper';
 import PersonalDataWrapper from '../Modals/Register/PersonalData/PersonalDataWrapper';
 import AddressWrapper from '../Modals/Register/Address/AddressWrapper';
-import AddressWrapper2 from '../Modals/Register/Address copy/AddressWrapper2';
 
 interface TopBarMenuProps {
     search: string,
