@@ -7,6 +7,7 @@
 
   &__galeria{
     margin-right: 2rem;
+    width: 50%;
   }
 
   &__dados{
@@ -16,22 +17,47 @@
 
 .dados__flexContainer{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.flexContainer__selecionarLance, .flexContainer__valorAtualeTempoRestante, .flexContainer__SimularFrete, .flexContainer__Leiloeiro{
+.dados__titulo{
+  font-size: 1.6rem;
+}
+
+.dados__subtitulo{
+  font-size: 1.1rem;
+}
+
+.selecionarLance__title{
+  font-size: 1.2rem;
+  height: 15%;
+  margin: 0 0 1rem 0;
+}
+
+.flexContainer__selecionarLance, .flexContainer__valorAtualeTempoRestante{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 11rem;
+  width: 45%;
+}
+
+.valorAtualeTempoRestante__title{
+  height: 15%;
+  margin: 0 0 1rem 0;
 }
 
 .selecionarLance__select{
+  font-size: 1rem;
   background-color: inherit;
   border-radius: 5px;
   color: #F6F6F6;
   padding: 0.3rem;
   text-align: center;
   margin-bottom: 0.5rem;
+  width: 70%;
 
   & *{
     background: #1E1F28;
@@ -39,9 +65,151 @@
 }
 
 .selecionarLance__button{
+  font-size: 1rem;
   border: none;
   cursor: pointer;
   background-color: inherit;
   color: #F6F6F6;
   text-decoration: underline;
+}
+
+.flexContainer__SimularFrete{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+}
+
+.simularFrete__inputButton{
+  border: 1px solid #FAFAFA;
+  margin-left: 0.5rem;
+
+  & input{
+    background-color: inherit;
+    color: #FAFAFA;
+    border: none;
+    padding: 0.5rem;
+    height: 1rem;
+    width: 5rem;
+  }
+
+  & button{
+    cursor: pointer;
+    background-color: inherit;
+    color: #FAFAFA;
+    border: 1px solid #FAFAFA;
+    padding: 0.45rem;
+  }
+}
+
+.dados__botaoDarLance{
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 32px;
+  width: 45%;
+  padding: 0.25rem;
+  height: 2.7rem;
+  background-color: #55D85A;
+  color: #F6F6F6;
+  text-align: center;
+}
+
+.flexContainer__leiloeiro{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.leiloeiro__image, .pergunta__img{
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.DetalhesProduto, .FichaTecnica{
+  color: #F6F6F6;
+  margin: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &__text{
+    margin: 1rem auto;
+  }
+}
+
+.Perguntas{
+  color: #F6F6F6;
+  margin: 3rem 1rem;
+
+  &__text{
+    background-color: inherit;
+    color: inherit;
+    padding: 0.5rem;
+    min-height: 3rem;
+    width: 98%;
+  }
+
+  &__pergunta{
+    padding: 1rem;
+    background-color: #2A2C36;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .pergunta__imgBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+
+    .pergunta__button{
+      cursor: pointer;
+      margin-top: 0.5rem;
+      text-decoration: underline;
+    }
+  }
+
+  .pergunta__box{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    .pergunta__user{
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .pergunta__text{
+    font-size: 1.05rem;
+  }
+
+  .pergunta__date{
+    width: 10%;
+  }
+}
+
+.leiloeiro__textos, .leiloeiro__box{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 4.5rem;
+}
+
+.leiloeiro_link{
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
