@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 import TimeLeftBox from '../TimeLeftBox';
 import styles from './AuctionCarousel.module.scss';
 
@@ -8,31 +9,31 @@ const SliderData = [
         image: 'https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1760478459733722920/products/RSU001_3D.jpg',
         name: 'Rising Sun',
         subtitle: 'Leilão acontecendo agora!',
-        endDateTime: 'Oct 31, 2022 10:00:00'
+        endDateTime: 'Sep 31, 2022 10:00:00'
     },
     {
         image: 'https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg',
         name: 'Twilight Imperium 4',
         subtitle: 'Leilão finaliza hoje',
-        endDateTime: 'Jul 31, 2022 22:00:00'
+        endDateTime: 'Aug 31, 2022 22:00:00'
     },
     {
         image: 'https://cf.shopee.com.br/file/b3097753814b45040cd2ec44184ea81e',
         name: 'Gloomhaven',
         subtitle: 'Recém cadastrado',
-        endDateTime: 'Jul 31, 2022 10:00:00'
+        endDateTime: 'Aug 31, 2022 10:00:00'
     },
     {
         image: 'http://d3ugyf2ht6aenh.cloudfront.net/stores/163/751/products/7-wonders1-56ea6ab62cd996f3e916276579801644-640-0.jpg',
         name: '7 wonders segunda edição',
         subtitle: 'Leilão acontecendo agora!',
-        endDateTime: 'Aug 3, 2022 10:00:00'
+        endDateTime: 'Aug 30, 2022 10:00:00'
     },
     {
-        image: 'https://facilshopping.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/u/b/ubongo.jpg',
+        image: 'https://cf.geekdo-images.com/oH89PrHTA___1X6QsdsULg__original/img/T8Eroq44Cj1czMUBs9XfmuFe2YM=/0x0/filters:format(jpeg)/pic3924718.jpg',
         name: 'Ubongo',
         subtitle: 'Raridade!!',
-        endDateTime: 'Jul 22, 2022 10:00:00'
+        endDateTime: 'Aug 22, 2022 10:00:00'
     },
 ]
 
@@ -40,13 +41,7 @@ const AuctionCarousel = () => {
     const [current, setCurrent] = useState(0);
     const length = SliderData.length;
     const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-
-    const estilo = {
-        'backgroundImage': `linear-gradient(180deg, rgba(0, 0, 0, 0.61) 0%, rgba(0, 0, 0, 0.1) 100%), url(${SliderData[current].image})`,
-        'backgroundPosition': 'center',
-        'backgroundSize': 'cover',
-        'backgroundRepeat': 'no-repeat'
-    }
+    const navigate = useNavigate();
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
@@ -89,6 +84,7 @@ const AuctionCarousel = () => {
                             className={index === current ? `${styles.slideActive}` : `${styles.slide}`}
                             key={index}
                             style={defineBackground(index)}
+                            onClick={() => navigate(`/leilao/${index + 1}`)}
                         >
                             <h2 className={styles.titulo}>{slide.name}</h2>
                             <p className={styles.subtitulo}>{slide.subtitle}</p>

@@ -54,6 +54,7 @@ export default function Auctions(props: AuctionsProps) {
             {list.map(auction => (
                 <AuctionCard
 					key={auction.id}
+					id={auction.id}
                     imgSrc={auction.image}
                     name={auction.name}
                     price={auction.price}
