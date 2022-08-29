@@ -1,0 +1,207 @@
+.AuctionData {
+    &__Title {
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        height: 1rem;
+        width: 100vw;
+        font-weight: bold;
+        padding-bottom: 1.5rem;
+    }
+
+    &__Fields {
+        margin-left: 0;
+
+        label {
+            width: 15%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+        }
+
+        & :nth-child(2n+2) {
+            margin-right: 4rem;
+        }
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.GameData {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__Title {
+        border-top: solid 1px #FAFAFA;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        width: 100vw;
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        height: 1rem;
+        font-weight: bold;
+    }
+
+    &__Fields {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        width: 45%;
+
+        label {
+            width: 35%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        & :nth-child(2n+2) {
+            margin-right: 4rem;
+        }
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            height: 1rem;
+            width: 44%;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        select {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            width: 47%;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            text-align: center;
+        }
+    }
+
+    &__Measurements {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        width: 45%;
+
+        label {
+            width: 35%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        & :nth-child(2n+2) {
+            margin-right: 4rem;
+        }
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            height: 1rem;
+            width: 44%;
+            margin: 1rem 0;
+            text-align: center;
+        }
+    }
+
+    &__PhotoInput{
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+
+        input{
+            margin-left: 1rem;
+        }
+    }
+
+    &__Photos{
+        background-color: #2A2C36;
+        padding: 0.5rem;
+        list-style: none;
+        display: flex;
+        width: 64%;
+        height: 6.4rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        img{
+            height: 80px;
+            width: 80px;
+            margin: 0.1rem 0.3rem;
+        }
+    }
+}
+
+label {
+    width: 16%;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    color: #FAFAFA;
+    background-color: #2A2C36;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    height: 4rem;
+    width: 66%;
+}
+
+.select-search{
+    width: 47%;
+
+    &__option{
+        background-color: #FAFAFA;
+    }
+
+    :nth-child(2){
+        width: 20.1%;
+        position: absolute;
+
+
+        ul{
+            height: 50vh;
+            background-color: #2A2C36;
+            list-style: none;
+            margin: 0;
+            padding-inline-start: 0;
+            border: 1px solid #FAFAFA;
+            overflow-y: scroll;
+
+            li{
+                display: contents;
+                border: none;
+                background-color: inherit;
+                width: 100%;
+                text-align: inherit;
+            }
+        }
+
+        button{
+            border: none;
+            width: 100%;
+            background-color: inherit;
+            color: inherit;
+            padding: 0.5rem;
+
+        }
+    }
+
+    input{
+        width: 94%;
+        
+
+    }
+
+
+
+}
