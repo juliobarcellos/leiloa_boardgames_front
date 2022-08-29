@@ -1,6 +1,4 @@
-import { useState } from "react";
 import TimeLeftBox from "../../components/TimeLeftBox";
-import TopBarMenu from "../../components/TopBarMenu";
 import ImageGallery from 'react-image-gallery';
 import { BsTruck } from 'react-icons/bs';
 import auctions from '../../data/auctions.json'
@@ -8,7 +6,6 @@ import './AuctionPage.scss';
 import { useParams } from "react-router-dom";
 
 export default function AuctionPage() {
-    const [search, setSearch] = useState('');
     const { id } = useParams();
 	const auction = auctions.find(item => item.id === Number(id));
     const lancesDisponiveis = [];
@@ -27,7 +24,6 @@ export default function AuctionPage() {
     }
     return (
         <>
-            <TopBarMenu search={search} setSearch={setSearch} />
             <div className='dadosLeilao'>
                 <div className='dadosLeilao__galeria'>
                     <ImageGallery thumbnailPosition="left" items={auction.images} />
