@@ -29,7 +29,7 @@ export default function TopBarMenu(props: TopBarMenuProps) {
                     <MdHome />
                     Home
                 </NavLink>
-                <NavLink className={({ isActive }) => isActive ? `${styles['menu__link--Ativo']}` : `${styles.menu__link}`} to='/sell'>
+                <NavLink className={({ isActive }) => isActive ? `${styles['menu__link--Ativo']}` : `${styles.menu__link}`} to='leilao/novo'>
                     <MdShoppingBasket />
                     Vender
                 </NavLink>
