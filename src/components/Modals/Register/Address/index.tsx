@@ -51,6 +51,8 @@ const AddressModal: React.FC<AddressModalProps> = ({
                     onKeyDown={onKeyDown}
                     value={cep}
                     onChange={e => setCep(e.target.value)}
+                    pattern='[\d]{5}-?[\d]{3}'
+                    title='O campo CEP deve possuir 8 dígitos numéricos'
                     type="number"
                     placeholder='00000-000'
                 />
