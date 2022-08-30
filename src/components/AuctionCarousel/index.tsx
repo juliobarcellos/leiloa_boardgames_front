@@ -30,7 +30,7 @@ const SliderData = [
         endDateTime: 'Aug 30, 2022 10:00:00'
     },
     {
-        image: 'https://cf.geekdo-images.com/oH89PrHTA___1X6QsdsULg__original/img/T8Eroq44Cj1czMUBs9XfmuFe2YM=/0x0/filters:format(jpeg)/pic3924718.jpg',
+        image: 'https://deviramericas.com/wp-content/uploads/2014/10/Ubongo-caja-600x600-1.jpg',
         name: 'Ubongo',
         subtitle: 'Raridade!!',
         endDateTime: 'Aug 22, 2022 10:00:00'
