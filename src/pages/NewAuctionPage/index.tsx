@@ -13,14 +13,14 @@ export default function NewAuctionPage() {
     const [search, setSearch] = useState('');
 
     const options = [
-        { label: 'Guerra do Anel', value: 'sv', id: 1 , text: 'Guerra' },
-        { label: 'Galaxy Trucker', value: 'en', id: 2 , text: 'Galaxy T' },
-        { label: 'Galaxy Showdown', value: 'gs', id: 3 , text: 'Galaxy S' },
-        { label: 'Going Crazy', value: 'gc', id: 4 , text: 'Going' },
-        { label: 'Going Crazy', value: 'ga', id: 5 , text: 'Going' },
-        { label: 'Going Crazy', value: 'gd', id: 6 , text: 'Going' },
-        { label: 'Going Crazy', value: 'gr', id: 7 , text: 'Going' },
-        { label: 'Galactic Imperium', value: 'gi', id: 8 , text: ' Gala Im' }
+        { label: 'Guerra do Anel', value: 'sv', id: 1, text: 'Guerra' },
+        { label: 'Galaxy Trucker', value: 'en', id: 2, text: 'Galaxy T' },
+        { label: 'Galaxy Showdown', value: 'gs', id: 3, text: 'Galaxy S' },
+        { label: 'Going Crazy', value: 'gc', id: 4, text: 'Going' },
+        { label: 'Going Crazy', value: 'ga', id: 5, text: 'Going' },
+        { label: 'Going Crazy', value: 'gd', id: 6, text: 'Going' },
+        { label: 'Going Crazy', value: 'gr', id: 7, text: 'Going' },
+        { label: 'Galactic Imperium', value: 'gi', id: 8, text: ' Gala Im' }
     ];
 
     function measurementsOnChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -130,12 +130,17 @@ export default function NewAuctionPage() {
                         <label htmlFor='inputPhotos'>Fotos</label>
                         <input type="file" id='inputPhotos' name='inputPhotos' onChange={photosOnChange} accept="image/png, image/jpeg, image/jpg" multiple />
                     </section>
-                    <ul className={styles.GameData__Photos}>
-
-                    </ul>
+                    <ul className={styles.GameData__Photos} />
                 </section>
-                <section>
+                <section className={styles.ShipOnHands}>
                     <span>Opção de entrega em mãos</span>
+                    <div>
+                        <input type='checkbox' id='entregaCheck' />
+                        <label htmlFor='entregaCheck'>Aceito realizar entrega em mãos</label>
+                    </div>
+                </section>
+                <section className={styles.Register}>
+                    <button type='submit'>Registrar Leilão</button>
                 </section>
             </form>
         </section>
