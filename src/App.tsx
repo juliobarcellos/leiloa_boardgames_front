@@ -18,7 +18,7 @@ function App() {
         <ScrollToTop />
         <TopBarMenu search={search} setSearch={setSearch} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home search={search} setSearch={setSearch} />} />
           <Route path="login" element={<LoginModalWrapper />} />
           <Route path="register" element={<RegisterModalWrapper />} />
           <Route path="forgot_password" element={<ForgotPasswordWrapper />} />
