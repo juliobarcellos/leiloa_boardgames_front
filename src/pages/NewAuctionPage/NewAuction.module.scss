@@ -17,10 +17,6 @@
             margin-right: 2rem;
         }
 
-        & :nth-child(2n+2) {
-            margin-right: 4rem;
-        }
-
         input {
             color: #FAFAFA;
             background-color: #2A2C36;
@@ -52,6 +48,7 @@
         width: 45%;
 
         label {
+            height: 2.3rem;
             width: 35%;
             margin-left: 1rem;
             margin-right: 2rem;
@@ -59,9 +56,6 @@
             margin-bottom: 1rem;
         }
 
-        & :nth-child(2n+2) {
-            margin-right: 4rem;
-        }
 
         input {
             color: #FAFAFA;

@@ -1,0 +1,82 @@
+.Dropdown {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 1rem;
+    width: 47%;
+    margin: 0;
+
+    &__input {
+        background-color: #2A2C36;
+        align-items: center;
+        display: flex;
+        margin: 1rem 0;
+        height: 1rem;
+        width: 94%;
+        padding: 0.5rem;
+
+        cursor: text;
+        border-width: 2px;
+        border-style: inset;
+        border-color: rgb(133, 133, 133);
+        border-image: initial;
+
+        input {
+            margin: 0;
+            background-color: inherit;
+            border: none;
+            width: 95%;
+            outline: none;
+            padding: 0;
+        }
+
+        svg {
+            margin-right: 0;
+
+            * {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__list {
+        background-color: #2A2C36;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding: 0.2rem;
+        transition: ease-in-out;
+
+        &--game {
+            padding: 0.3rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 3rem;
+                width: 3rem;
+            }
+
+            span {
+                margin-left: 1rem;
+                color: #FAFAFA;
+            }
+
+        }
+
+        :hover {
+            cursor: pointer;
+            background-color: rgb(220, 40, 65);
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}

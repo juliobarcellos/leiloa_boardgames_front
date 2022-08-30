@@ -2,6 +2,7 @@ import styles from './NewAuction.module.scss';
 import './Teste.css';
 import CurrencyInput from 'react-currency-input-field';
 import { useState } from 'react';
+import GameSearchDropdown from '../../components/GameSearchDropdown';
 
 export default function NewAuctionPage() {
 
@@ -105,7 +106,7 @@ export default function NewAuctionPage() {
                     <span className={styles.GameData__Title}>Dados do Jogo</span>
                     <section className={styles.GameData__Fields}>
                         <label>Nome</label>
-                        <select></select>
+                        <GameSearchDropdown search={search} setSearch={setSearch} />
                         <label>Estado do jogo</label>
                         <select></select>
                         <label>Edição</label>
