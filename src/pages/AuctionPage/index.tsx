@@ -44,8 +44,8 @@ export default function AuctionPage() {
                             <button className="selecionarLance__button">Ver lances anteriores</button>
                         </div>
                         <div className="flexContainer__valorAtualeTempoRestante">
-                            <h4>Lance atual R$ {auction.price},00</h4>
-                            <h4>Tempo Restante:</h4>
+                            <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>
+                            <h4 className="flexContainer__valorAtualeTempoRestante--tempoRestante">Tempo Restante:</h4>
                             <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => console.log()} />
                         </div>
                     </div>
