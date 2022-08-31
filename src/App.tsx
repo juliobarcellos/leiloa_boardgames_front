@@ -5,18 +5,25 @@ import RegisterModalWrapper from './components/Modals/Register/RegisterModalWrap
 import ForgotPasswordWrapper from './components/Modals/ForgotPassword/ForgotPasswordWrapper';
 import Home from './pages/Home';
 import AuctionPage from './pages/AuctionPage';
+import ScrollToTop from './components/ScrollToTop';
+import NewAuctionPage from './pages/NewAuctionPage';
+import { useState } from 'react';
+import TopBarMenu from './components/TopBarMenu';
 
 function App() {
-
+  const [search, setSearch] = useState('');
   return (
     <>
       <Router>
+        <ScrollToTop />
+        <TopBarMenu search={search} setSearch={setSearch} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home search={search} setSearch={setSearch} />} />
           <Route path="login" element={<LoginModalWrapper />} />
           <Route path="register" element={<RegisterModalWrapper />} />
           <Route path="forgot_password" element={<ForgotPasswordWrapper />} />
-          <Route path="leilao/1" element={<AuctionPage />} />
+          <Route path="leilao/:id" element={<AuctionPage />} />
+          <Route path='leilao/novo' element={<NewAuctionPage />} />
         </Routes>
       </Router>
     </>

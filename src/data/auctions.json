@@ -3,11 +3,15 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1760478459733722920/products/RSU001_3D.jpg",
         "name": "Rising Sun",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 342,00",
+        "price": 342,
         "increment": 10,
-        "endDateTime": "Oct 31, 2022 10:00:00",
+        "endDateTime": "Sep 31, 2022 10:00:00",
         "tags": [1, 3, 6, 7, 8],
         "id": 1,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
         "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -52,11 +56,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg",
         "name": "Twilight Imperium 4",
         "subtitle": "Leilão finaliza hoje",
-        "price": "R$ 910,00",
+        "price": 910,
         "increment": 10,
-        "endDateTime": "Jul 31, 2022 22:00:00",
+        "endDateTime": "Aug 31, 2022 22:00:00",
         "tags": [1, 3, 7, 8],
         "id": 2,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg",
@@ -99,11 +109,17 @@
         "image": "https://cf.shopee.com.br/file/b3097753814b45040cd2ec44184ea81e",
         "name": "Gloomhaven",
         "subtitle": "Recém cadastrado",
-        "price": "R$ 850,00",
+        "price": 850,
         "increment": 10,
-        "endDateTime": "Jul 31, 2022 10:00:00",
+        "endDateTime": "Aug 31, 2022 10:00:00",
         "tags": [1, 3, 8, 9, 10],
         "id": 3,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://cf.shopee.com.br/file/b3097753814b45040cd2ec44184ea81e",
@@ -146,11 +162,17 @@
         "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/163/751/products/7-wonders1-56ea6ab62cd996f3e916276579801644-640-0.jpg",
         "name": "7 wonders segunda edição",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 310,00",
+        "price": 310,
         "increment": 10,
-        "endDateTime": "Aug 3, 2022 10:00:00",
+        "endDateTime": "Aug 30, 2022 10:00:00",
         "tags": [1, 3, 5],
         "id": 4,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "http://d3ugyf2ht6aenh.cloudfront.net/stores/163/751/products/7-wonders1-56ea6ab62cd996f3e916276579801644-640-0.jpg",
@@ -193,11 +215,17 @@
         "image": "https://cf.geekdo-images.com/oH89PrHTA___1X6QsdsULg__original/img/T8Eroq44Cj1czMUBs9XfmuFe2YM=/0x0/filters:format(jpeg)/pic3924718.jpg",
         "name": "Ubongo",
         "subtitle": "Raridade!!",
-        "price": "R$ 215,00",
+        "price": 215,
         "increment": 5,
-        "endDateTime": "Jul 22, 2022 10:00:00",
+        "endDateTime": "Aug 22, 2022 10:00:00",
         "tags": [3, 4, 5, 6],
         "id": 5,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://cf.geekdo-images.com/oH89PrHTA___1X6QsdsULg__original/img/T8Eroq44Cj1czMUBs9XfmuFe2YM=/0x0/filters:format(jpeg)/pic3924718.jpg",
@@ -240,11 +268,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v5913191664724708845/products/TTR002_frente.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "Ticket to Ride: Europa",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 367,00",
+        "price": 367,
         "increment": 10,
-        "endDateTime": "Aug 5, 2022 10:00:00",
+        "endDateTime": "Aug 25, 2022 10:00:00",
         "tags": [1, 3, 5, 6],
         "id": 6,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v5913191664724708845/products/TTR002_frente.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -276,11 +310,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v2204134488230643593/products/PAN001_P01.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "Pandemic",
         "subtitle": "Leilão finaliza hoje",
-        "price": "R$ 205,00",
+        "price": 205,
         "increment": 5,
-        "endDateTime": "Jul 28, 2022 22:00:00",
+        "endDateTime": "Aug 28, 2022 22:00:00",
         "tags": [1, 3, 6, 9],
         "id": 7,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v2204134488230643593/products/PAN001_P01.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -312,11 +352,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v603767143808069804/products/JME001_3D.jpg&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "O Senhor dos Anéis: Jornadas na Terra Média",
         "subtitle": "Recém cadastrado",
-        "price": "R$ 590,00",
+        "price": 590,
         "increment": 10,
-        "endDateTime": "Aug 7, 2022 10:00:00",
+        "endDateTime": "Aug 27, 2022 10:00:00",
         "tags": [1, 3, 6, 9, 10],
         "id": 8,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v603767143808069804/products/JME001_3D.jpg&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -348,11 +394,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v6610603286103377629/products/LTR101_caixa_frente.jpg&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "O Senhor dos Anéis: Card Game (Revised Core Set)",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 480,00",
+        "price": 480,
         "increment": 10,
-        "endDateTime": "Aug 11, 2022 10:00:00",
+        "endDateTime": "Aug 21, 2022 10:00:00",
         "tags": [1, 3, 6, 9, 10, 11],
         "id": 9,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v6610603286103377629/products/LTR101_caixa_frente.jpg&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -384,11 +436,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1860694066886785307/products/MOM001_3D.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "Mansions of Madness, Segunda Edição",
         "subtitle": "Raridade!!",
-        "price": "R$ 695,00",
+        "price": 695,
         "increment": 5,
-        "endDateTime": "Aug 5, 2022 10:00:00",
+        "endDateTime": "Aug 25, 2022 10:00:00",
         "tags": [1, 3, 6, 9, 10],
         "id": 10,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1860694066886785307/products/MOM001_3D.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -420,11 +478,17 @@
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v2673451304664446439/products/ZOM201_3D.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
         "name": "Zombicide: Black Plague",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 557,00",
+        "price": 557,
         "increment": 10,
-        "endDateTime": "Aug 10, 2022 10:00:00",
+        "endDateTime": "Aug 30, 2022 10:00:00",
         "tags": [1, 3, 6, 9, 10],
         "id": 11,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v2673451304664446439/products/ZOM201_3D.png&outputFormat=JPEG&quality=0.8&alphaChannelColor=ffffff",
@@ -456,11 +520,17 @@
         "image": "https://m.media-amazon.com/images/I/71RXBzi-BHL._AC_SY450_.jpg",
         "name": "Projeto Gaia",
         "subtitle": "Leilão finaliza hoje",
-        "price": "R$ 580,00",
+        "price": 580,
         "increment": 10,
-        "endDateTime": "Jul 27, 2022 22:00:00",
+        "endDateTime": "Aug 27, 2022 22:00:00",
         "tags": [1, 3, 6, 10],
         "id": 12,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://m.media-amazon.com/images/I/71RXBzi-BHL._AC_SY450_.jpg",
@@ -492,11 +562,17 @@
         "image": "https://m.media-amazon.com/images/I/614zbkJJJgL._AC_SL1200_.jpg",
         "name": "Brass: Birmingham",
         "subtitle": "Recém cadastrado",
-        "price": "R$ 489,00",
+        "price": 489,
         "increment": 10,
-        "endDateTime": "Aug 3, 2022 10:00:00",
+        "endDateTime": "Aug 30, 2022 10:00:00",
         "tags": [1, 3, 6, 7],
         "id": 13,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://m.media-amazon.com/images/I/614zbkJJJgL._AC_SL1200_.jpg",
@@ -528,11 +604,17 @@
         "image": "https://matagot-friends.com/france/3155-large_default/eclipse.jpg",
         "name": "Eclipse: Second Dawn for the Galaxy",
         "subtitle": "Leilão acontecendo agora!",
-        "price": "R$ 1020,00",
+        "price": 1020,
         "increment": 10,
-        "endDateTime": "Aug 8, 2022 10:00:00",
+        "endDateTime": "Aug 28, 2022 10:00:00",
         "tags": [1, 3, 6, 7],
         "id": 14,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://matagot-friends.com/france/3155-large_default/eclipse.jpg",
@@ -564,11 +646,17 @@
         "image": "https://mlb-s2-p.mlstatic.com/427901-MLB20434524644_092015-C.jpg",
         "name": "Agricola: Edição Revisada",
         "subtitle": "Raridade!!",
-        "price": "R$ 320,00",
+        "price": 320,
         "increment": 10,
-        "endDateTime": "Jul 29, 2022 10:00:00",
+        "endDateTime": "Aug 29, 2022 10:00:00",
         "tags": [1, 3, 5, 6],
         "id": 15,
+        "leiloeiro": {
+            "name": "Matilda Brown",
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+        },
+        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
             {
                 "original": "https://mlb-s2-p.mlstatic.com/427901-MLB20434524644_092015-C.jpg",

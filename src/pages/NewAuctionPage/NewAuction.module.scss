@@ -1,0 +1,189 @@
+.AuctionData {
+    &__Title {
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        height: 1rem;
+        width: 100vw;
+        font-weight: bold;
+        padding-bottom: 1.5rem;
+    }
+
+    &__Fields {
+        margin-left: 0;
+
+        label {
+            width: 15%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+        }
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.GameData {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
+    &__Title {
+        border-top: solid 1px #FAFAFA;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        width: 100vw;
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        height: 1rem;
+        font-weight: bold;
+    }
+
+    &__Fields {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        width: 45%;
+
+        label {
+            height: 2.3rem;
+            width: 35%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            height: 1rem;
+            width: 44%;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        select {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            width: 47%;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            text-align: center;
+        }
+    }
+
+    &__Measurements {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        width: 45%;
+
+        label {
+            width: 35%;
+            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        & :nth-child(2n+2) {
+            margin-right: 4rem;
+        }
+
+        input {
+            color: #FAFAFA;
+            background-color: #2A2C36;
+            padding: 0.5rem;
+            height: 1rem;
+            width: 44%;
+            margin: 1rem 0;
+            text-align: center;
+        }
+    }
+
+    &__PhotoInput {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            margin-left: 1rem;
+        }
+    }
+
+    &__Photos {
+        background-color: #2A2C36;
+        padding: 0.5rem;
+        list-style: none;
+        display: flex;
+        width: 64%;
+        height: 6.4rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        img {
+            height: 80px;
+            width: 80px;
+            margin: 0.1rem 0.3rem;
+        }
+    }
+}
+
+label {
+    width: 16%;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    color: #FAFAFA;
+    background-color: #2A2C36;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    height: 4rem;
+    width: 66%;
+}
+
+.ShipOnHands {
+    span {
+        display: inline-block;
+        border-top: solid 1px #FAFAFA;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.2rem;
+        height: 1rem;
+        font-weight: bold;
+        width: 93.7vw;
+    }
+
+    input {
+        margin-left: 2rem;
+    }
+}
+
+.Register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 1px #FAFAFA;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    button{
+        cursor: pointer;
+        color: #FAFAFA;
+        background-color: #EF3651;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 0.7rem 1rem;
+        width: 20%;
+    }
+}

@@ -79,6 +79,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           value={password}
           onChange={e => setPassword(e.target.value)}
           type="password"
+          pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ ]).{6,20}$'
+          title='A senha deve conter de 6 a 20 caracteres, deve conter ao menos uma letra maiúscula, uma letra minúscula e um número'
           placeholder='Digite sua senha'
           icon={<RiLock2Line size={24} />}
         />
@@ -87,6 +89,8 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           value={passwordRepeat}
           onChange={e => setPasswordRepeat(e.target.value)}
           type="password"
+          pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ ]).{6,20}$'
+          title='A senha deve conter de 6 a 20 caracteres, deve conter ao menos uma letra maiúscula, uma letra minúscula e um número'
           placeholder='Digite sua senha novamente'
           icon={<RiLock2Line size={24} />}
         />
