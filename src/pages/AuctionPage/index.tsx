@@ -4,21 +4,29 @@ import { BsTruck } from 'react-icons/bs';
 import auctions from '../../data/auctions.json'
 import './AuctionPage.scss';
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import BidModal from "../../components/Modals/Bid/BidModal";
 
 export default function AuctionPage() {
     const { id } = useParams();
-	const auction = auctions.find(item => item.id === Number(id));
-    const lancesDisponiveis = [];
+    const auction = auctions.find(item => item.id === Number(id));
+    const [lancesDisponiveis, setLancesDisponiveis] = useState<number[]>([]);
+    const [isBidModalVisible, setIsBidModalVisible] = useState(false);
+    const [isShipmentModalVisible, setIsShipmentModalVisible] = useState(false);
+    const [bidValue, setBidValue] = useState(0);
 
-    for (let i = 1; i <= 5; i++) {
-        if(!auction){
-            break;
+    useEffect(() => {
+        if (auction) {
+            setBidValue(auction.price + auction.increment)
+            for (let i = 1; i <= 5; i++) {
+                lancesDisponiveis[i] = auction.price + (auction.increment * i);
+            }
         }
-        lancesDisponiveis[i] = auction.price + (auction.increment * i);
-    }
 
-    if(!auction){
-        return(
+    }, []);
+
+    if (!auction) {
+        return (
             <div>404 Not Found</div>
         )
     }
@@ -34,10 +42,10 @@ export default function AuctionPage() {
                     <div className="dados__flexContainer">
                         <div className="flexContainer__selecionarLance">
                             <h4 className="selecionarLance__title">Selecione o seu lance</h4>
-                            <select className="selecionarLance__select">
-                                {lancesDisponiveis.map(lance => {
+                            <select className="selecionarLance__select"  onChange={e => setBidValue(+e.target.value)} >
+                                {lancesDisponiveis.map((lance, index) => {
                                     return (
-                                        <option>R$ {lance},00</option>
+                                        <option key={index} value={lance}>R$ {lance},00</option>
                                     )
                                 })}
                             </select>
@@ -50,7 +58,7 @@ export default function AuctionPage() {
                         </div>
                     </div>
                     <div className="dados__flexContainer">
-                        <button className="dados__botaoDarLance">Dar Lance!</button>
+                        <button className="dados__botaoDarLance" onClick={() => setIsBidModalVisible(true)}>Dar Lance!</button>
                         <div className="flexContainer__leiloeiro">
                             <div className="leiloeiro__box">
                                 <img className="leiloeiro__image" src={auction.leiloeiro.profilePic} alt="" />
@@ -87,9 +95,9 @@ export default function AuctionPage() {
                 <h3 className="Perguntas__title">Tem uma pergunta?</h3>
                 <textarea className="Perguntas__text" placeholder='Escreva aqui a sua pergunta e tecle "Enter" para enviar' />
                 <h4 className="Perguntas__qtd">12 Perguntas</h4>
-                {auction.questions?.map(question => {
+                {auction.questions?.map((question, index) => {
                     return (
-                        <div className="Perguntas__pergunta">
+                        <div key={index} className="Perguntas__pergunta">
                             <div className="pergunta__imgBox">
                                 <img className="pergunta__img" src={question.user.profilePic} alt="" />
                                 <span className="pergunta__button">Responder</span>
@@ -103,6 +111,7 @@ export default function AuctionPage() {
                     )
                 })}
             </div>
+            {isBidModalVisible && <BidModal value={bidValue} isModalVisible={isBidModalVisible} setIsModalVisible={setIsBidModalVisible} />}
         </>
     )
 }
