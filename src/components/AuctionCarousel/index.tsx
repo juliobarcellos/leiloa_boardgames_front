@@ -84,7 +84,7 @@ const AuctionCarousel = () => {
                             className={index === current ? `${styles.slideActive}` : `${styles.slide}`}
                             key={index}
                             style={defineBackground(index)}
-                            onClick={() => navigate(`/leilao/${index + 1}`)}
+                            onClick={index === current ? () => navigate(`/leilao/${index + 1}`): undefined}
                         >
                             <h2 className={styles.titulo}>{slide.name}</h2>
                             <p className={styles.subtitulo}>{slide.subtitle}</p>
