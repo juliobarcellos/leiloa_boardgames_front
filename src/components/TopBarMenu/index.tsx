@@ -7,6 +7,7 @@ import { useState } from 'react';
 import LoginModalWrapper from '../Modals/Login/LoginModalWrapper';
 import PersonalDataWrapper from '../Modals/Register/PersonalData/PersonalDataWrapper';
 import AddressWrapper from '../Modals/Register/Address/AddressWrapper';
+import NotificationsDropdown from '../NotificationsDropdown';
 
 interface TopBarMenuProps {
     search: string,
@@ -33,9 +34,10 @@ export default function TopBarMenu(props: TopBarMenuProps) {
                     <MdShoppingBasket />
                     Vender
                 </NavLink>
-                <NavLink className={({ isActive }) => isActive ? `${styles['menu__link--Ativo']}` : `${styles.menu__link}`} to='/forgot_password'>
-                    <MdShoppingCart />
-                    Home
+                <NavLink className={({ isActive }) => isActive ? `${styles['menu__link--Ativo']}` : `${styles.menu__link}`} to={'_blank'}>
+                    <MdShoppingCart onClick={toggleModal} />
+                    Carrinho
+                    <NotificationsDropdown isOpen={isModalVisible} setIsOpen={setIsModalVisible} />
                 </NavLink>
                 <NavLink className={({ isActive }) => isActive ? `${styles['menu__link--Ativo']}` : `${styles.menu__link}`} to='/register'>
                     <MdFavorite />

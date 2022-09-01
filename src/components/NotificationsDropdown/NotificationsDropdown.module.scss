@@ -1,0 +1,93 @@
+.Notifications {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 1rem;
+    width: 47%;
+    margin: 0;
+
+    &__list {
+        background-color: #2A2C36;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding: 0.2rem;
+        transition: ease-in-out;
+        position: absolute;
+        min-height: 4rem;
+        width: 22rem;
+        top: 5.3rem;
+        z-index: 4;
+
+        &--notification {
+            padding: 0.3rem;
+            display: flex;
+            align-items: center;
+            height: 5em;
+            border-bottom: 1px solid #ABB4BD;
+
+            img {
+                height: 3rem;
+                width: 3rem;
+            }
+
+            span {
+                font-size: 85%;
+                margin-left: 1rem;
+                color: #FAFAFA;
+            }
+
+            .notification__data{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .notification__game{
+                font-weight: bold;
+                font-size: 90%;
+                margin-bottom: 0.3rem;
+            }
+
+            .notification__text{
+                color: #ABB4BD;
+                margin-bottom: 0.3rem;
+            }
+
+            .notification__dtime{
+                font-size: 75%;
+            }
+
+        }
+
+        &--noneNotification {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            height: 3.7rem;
+            color: #ABB4BD;
+            font-weight: normal;
+        }
+
+        &--notification:hover {
+            cursor: pointer;
+            background-color: rgb(220, 40, 65);
+            .notification__text{
+                color: #FAFAFA;
+            }
+            transition: ease-in-out;
+        }
+    }
+
+
+    &__overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+}
