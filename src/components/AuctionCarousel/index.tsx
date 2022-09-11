@@ -15,25 +15,25 @@ const SliderData = [
         image: 'https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg',
         name: 'Twilight Imperium 4',
         subtitle: 'Leilão finaliza hoje',
-        endDateTime: 'Aug 31, 2022 22:00:00'
+        endDateTime: 'Sep 31, 2022 22:00:00'
     },
     {
         image: 'https://cf.shopee.com.br/file/b3097753814b45040cd2ec44184ea81e',
         name: 'Gloomhaven',
         subtitle: 'Recém cadastrado',
-        endDateTime: 'Aug 31, 2022 10:00:00'
+        endDateTime: 'Sep 31, 2022 10:00:00'
     },
     {
         image: 'http://d3ugyf2ht6aenh.cloudfront.net/stores/163/751/products/7-wonders1-56ea6ab62cd996f3e916276579801644-640-0.jpg',
         name: '7 wonders segunda edição',
         subtitle: 'Leilão acontecendo agora!',
-        endDateTime: 'Aug 30, 2022 10:00:00'
+        endDateTime: 'Sep 30, 2022 10:00:00'
     },
     {
         image: 'https://deviramericas.com/wp-content/uploads/2014/10/Ubongo-caja-600x600-1.jpg',
         name: 'Ubongo',
         subtitle: 'Raridade!!',
-        endDateTime: 'Aug 22, 2022 10:00:00'
+        endDateTime: 'Sep 22, 2022 10:00:00'
     },
 ]
 
