@@ -1,0 +1,195 @@
+.checkout {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+
+    &__shipment {
+        width: 40%;
+
+        .shipment__address {
+            margin: 0 0 0 0;
+
+            h4 {
+                color: #FAFAFA;
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: 1rem;
+                margin-bottom: 0.7rem;
+            }
+
+            &--details {
+                border-radius: 20px;
+                border: 2px solid #FAFAFA;
+                padding: 1rem;
+                display: flex;
+            }
+
+            .address {
+                &__title {
+                    color: #FAFAFA;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                &__group {
+                    display: flex;
+                    align-items: center;
+
+                    &--address {
+                        display: flex;
+                        flex-direction: column;
+                        width: 80%;
+                    }
+
+                    &--button {
+                        text-decoration: underline;
+                        cursor: pointer;
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .shipment__options {
+        margin: 0 0 1rem 0;
+        border: none;
+        padding: 0;
+
+        .option {
+            margin: 1rem 0;
+
+
+            h4 {
+                color: #FAFAFA;
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                margin-left: 1rem;
+                margin-bottom: 0.7rem;
+            }
+
+            &__title {
+                color: #FAFAFA;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            &__group {
+                border-radius: 20px;
+                border: 2px solid #FAFAFA;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+
+                input[type=radio] {
+                    border: 0px;
+                    width: 5%;
+                    height: 1.25rem;
+                }
+
+                &--details {
+                    margin-left: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    width: 75%;
+                }
+
+                &--price {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__orderDetails {
+        width: 50%;
+        margin: 2.9rem 2rem 2rem 2rem;
+        border: 2px solid #FAFAFA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 465px;
+
+        .orderDetails {
+            &__img {
+                height: 10rem;
+                width: 10rem;
+            }
+
+            &__game {
+                font-weight: bold;
+                font-size: 1.2rem;
+                color: #FAFAFA;
+                margin: 0.3rem;
+            }
+
+            &__values {
+                position: relative;
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+
+                &::before {
+                    position: absolute;
+                    top: 65%;
+                    content: ' ';
+                    height: 0.75px;
+                    width: 65%;
+                    background-color: #FAFAFA;
+                }
+            }
+
+            &__group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__value {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 0.5rem;
+
+                &:nth-child(1n+2){
+                    margin-bottom: 1rem;
+                }
+
+                &:nth-child(1n+3){
+                    margin-top: 1rem;
+                }
+            }
+        }
+        
+        &::before{
+            position: absolute;
+            bottom: 11%;
+            content: ' ';
+            height: 0.75px;
+            width: 100vw;
+            background-color: #FAFAFA;
+            transform: translateX(-22%);
+        }
+    }
+    &__button {
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        width: 30%;
+        padding: 16px 16px;
+        line-height: 1em;
+        color: white;
+        background-color: #E93651;
+
+        &:hover {
+            background-color: #ed2f4bea;
+            border-color: #ed2f4bea;
+        }
+    }
+}

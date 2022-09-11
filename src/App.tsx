@@ -9,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 import NewAuctionPage from './pages/NewAuctionPage';
 import { useState } from 'react';
 import TopBarMenu from './components/TopBarMenu';
+import Checkout from './pages/Checkout';
+import Payment from './pages/Checkout/Payment';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -24,6 +26,8 @@ function App() {
           <Route path="forgot_password" element={<ForgotPasswordWrapper />} />
           <Route path="leilao/:id" element={<AuctionPage />} />
           <Route path='leilao/novo' element={<NewAuctionPage />} />
+          <Route path='leilao/1/checkout' element={<Checkout />} />
+          <Route path='leilao/1/payment' element={<Payment />} />
         </Routes>
       </Router>
     </>
