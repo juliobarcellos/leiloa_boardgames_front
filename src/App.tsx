@@ -11,6 +11,7 @@ import { useState } from 'react';
 import TopBarMenu from './components/TopBarMenu';
 import Checkout from './pages/Checkout';
 import Payment from './pages/Checkout/Payment';
+import Footer from './components/Footer';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -29,6 +30,7 @@ function App() {
           <Route path='leilao/1/checkout' element={<Checkout />} />
           <Route path='leilao/1/payment' element={<Payment />} />
         </Routes>
+        <Footer/>
       </Router>
     </>
   );
