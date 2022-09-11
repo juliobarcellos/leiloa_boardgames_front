@@ -174,10 +174,6 @@
         width: 45%;
     }
 
-    & :nth-child(11) {
-        transform: translateX(-54%);
-    }
-
     ::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
@@ -533,6 +529,38 @@
 
         .confirmButton {
             background-color: #C8C8C8;
+        }
+    }
+}
+
+.newCardModal{
+    width: 100%;
+    font-size: 1rem;
+
+
+    &__inputGroup{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        background-color: #1E1F28;
+
+        label{
+            width: 100%;
+            margin: 0.5rem;
+        }
+
+        input{
+            background-color: inherit;
+            border-style: none;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            outline: none;
+            color: #FAFAFA;
+            
+        }
+
+        &--nomeTitular{
+            font-weight: bold;
         }
     }
 }

@@ -1,6 +1,7 @@
 import { MouseEventHandler, useEffect, useState } from 'react';
 import styles from './NotificationsDropdown.module.scss';
 import notificationsData from '../../data/notifications.json'
+import { useNavigate } from 'react-router-dom';
 
 type notificationType = typeof notificationsData[0];
 
@@ -11,6 +12,7 @@ interface NotificationsDropdownProps {
 
 export default function NotificationsDropdown({ isOpen, setIsOpen }: NotificationsDropdownProps) {
     const [notifications, setNotifications] = useState<notificationType[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setNotifications(notificationsData)
@@ -37,7 +39,7 @@ export default function NotificationsDropdown({ isOpen, setIsOpen }: Notificatio
                 <ol className={styles.Notifications__list} onClick={stopPropagation}>
                     {notifications.length > 0 ?
                         notifications.map(notification => (
-                            <li key={notification.id} className={styles['Notifications__list--notification']} >
+                            <li key={notification.id} className={styles['Notifications__list--notification']} onClick={() => navigate('/leilao/1/checkout')}>
                                 <img src={notification.image} className={styles.notification__img} />
                                 <div className={styles.notification__data}>
                                     <span className={styles.notification__game}>{notification.name}</span>

@@ -26,6 +26,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
     const [expdOrg, setExpdOrg] = useState('');
     const [uf, setUf] = useState('');
     const [birthDate, setBirthDate] = useState('2022-05-12');
+    const [expeditionDate, setExpeditionDate] = useState('2022-05-12');
     const [phone, setPhone] = useState('1198887777');
     const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
 
@@ -106,7 +107,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
                 value={docType}
                 onChange={e => setDocType(e.target.value)}
                 type="text"
-                placeholder='RG'
+                placeholder='Selecione o tipo de Documento'
             />
             <InputWithIcon
                 onKeyDown={onKeyDown}
@@ -128,7 +129,15 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
                 value={uf}
                 onChange={e => setUf(e.target.value)}
                 type="text"
-                placeholder='SP'
+                placeholder='Selecione o estado de expedição'
+            />
+            <InputWithIcon
+                onKeyDown={onKeyDown}
+                value={expeditionDate}
+                onChange={e => setExpeditionDate(e.target.value)}
+                type="date"
+                placeholder='Digite a data de expedição'
+                icon={<FiCalendar size={24} />}
             />
             <InputWithIcon
                 onKeyDown={onKeyDown}
