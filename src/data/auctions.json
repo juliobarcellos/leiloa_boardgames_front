@@ -26,7 +26,8 @@
         "tags": [1, 3, 6, 7, 8],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 3.5
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -94,7 +95,8 @@
         "tags": [1, 3, 7, 8],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -162,7 +164,8 @@
         "tags": [1, 3, 8, 9, 10],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -230,7 +233,8 @@
         "tags": [1, 3, 5],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -298,7 +302,8 @@
         "tags": [3, 4, 5, 6],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -366,7 +371,8 @@
         "tags": [1, 3, 5, 6],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -423,7 +429,8 @@
         "tags": [1, 3, 6, 9],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -480,7 +487,8 @@
         "tags": [1, 3, 6, 9, 10],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -537,7 +545,8 @@
         "tags": [1, 3, 6, 9, 10, 11],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -594,7 +603,8 @@
         "tags": [1, 3, 6, 9, 10],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -651,7 +661,8 @@
         "tags": [1, 3, 6, 9, 10],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -708,7 +719,8 @@
         "tags": [1, 3, 6, 10],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -765,7 +777,8 @@
         "tags": [1, 3, 6, 7],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -822,7 +835,8 @@
         "tags": [1, 3, 6, 7],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
@@ -879,7 +893,8 @@
         "tags": [1, 3, 5, 6],
         "leiloeiro": {
             "name": "Matilda Brown",
-            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg"
+            "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
+            "rating": 4.6
         },
         "fichaTecnica": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
         "images": [
