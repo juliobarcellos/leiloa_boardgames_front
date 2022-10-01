@@ -14,6 +14,8 @@ export default function AuctionPage() {
     const [isBidModalVisible, setIsBidModalVisible] = useState(false);
     const [isShipmentModalVisible, setIsShipmentModalVisible] = useState(false);
     const [bidValue, setBidValue] = useState(0);
+    let userRating = 5;
+    let percentRating = '100%';
 
     useEffect(() => {
         if (auction) {
@@ -21,6 +23,9 @@ export default function AuctionPage() {
             for (let i = 1; i <= 5; i++) {
                 lancesDisponiveis[i] = auction.price + (auction.increment * i);
             }
+            userRating = auction.leiloeiro.rating;
+            document.querySelector('.fillRatings')?.setAttribute('style', `${'width: '+percentRating}` )
+            percentRating = ((auction.leiloeiro.rating/5.0)*100)+'%;';
         }
 
     }, []);
@@ -42,7 +47,7 @@ export default function AuctionPage() {
                     <div className="dados__flexContainer">
                         <div className="flexContainer__selecionarLance">
                             <h4 className="selecionarLance__title">Selecione o seu lance</h4>
-                            <select className="selecionarLance__select"  onChange={e => setBidValue(+e.target.value)} >
+                            <select className="selecionarLance__select" onChange={e => setBidValue(+e.target.value)} >
                                 {lancesDisponiveis.map((lance, index) => {
                                     return (
                                         <option key={index} value={lance}>R$ {lance},00</option>
@@ -66,7 +71,16 @@ export default function AuctionPage() {
                             </div>
                             <div className="leiloeiro__textos">
                                 <span>Leiloeiro(a): {auction.leiloeiro.name}</span>
-                                <span>٭٭٭٭٭(10 avaliações)</span>
+                                <span className="leiloeiro__rating">
+                                    <div className="leiloeiro__starsRatings">
+                                        <div className="fillRatings" style={{'width': percentRating}} >
+                                            <span>★★★★★</span>
+                                        </div>
+                                        <div className="emptyRatings">
+                                            <span>★★★★★</span>
+                                        </div>
+                                    </div>
+                                    (10 avaliações)</span>
                             </div>
                         </div>
                     </div>
@@ -106,7 +120,7 @@ export default function AuctionPage() {
                                 <span className="pergunta__user">{question.user.name}</span>
                                 <span className="pergunta__text">{question.question}</span>
                             </div>
-                            <span className="pergunta__date">{question.questionDate}</span>
+                            <time className="pergunta__date">{question.questionDate}</time>
                         </div>
                     )
                 })}
