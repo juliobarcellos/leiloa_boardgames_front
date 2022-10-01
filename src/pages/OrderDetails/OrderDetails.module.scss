@@ -1,0 +1,216 @@
+.orderDetails {
+    border: 1px solid #FAFAFA;
+    border-radius: 10px;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__orderNumber,
+    &__title {
+        color: #FAFAFA;
+        font-size: 1.2rem;
+        margin: 1rem;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+
+        a {
+            color: #EF3651;
+        }
+    }
+
+    &__statusBar {
+        height: 6rem;
+        width: 100%;
+        display: flex;
+    }
+
+    &__step {
+
+        &--order,
+        &--payment,
+        &--shipment,
+        &--reception,
+        &--evaluation {
+            position: relative;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--dot {
+            position: absolute;
+            top: 5%;
+            width: 30px;
+            height: 30px;
+            background: #ABB4BD;
+            border-radius: 50%;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                top: 25%;
+                left: 25%;
+                border-radius: 50%;
+                background-color: #F5F5F5;
+            }
+        }
+
+        &--bar {
+            position: absolute;
+            top: 15%;
+            left: 54%;
+            height: 10px;
+            width: 95%;
+            background-color: #ABB4BD;
+        }
+
+        &--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__stepCompleted {
+        .orderDetails__step--dot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #EF3651;
+            border-radius: 50%;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                top: 25%;
+                left: 25%;
+                border-radius: 50%;
+                background-color: #FF667C;
+            }
+        }
+
+        .orderDetails__step--bar {
+            position: absolute;
+            top: 15%;
+            left: 54%;
+            height: 10px;
+            width: 95%;
+            background-color: #EF3651;
+        }
+    }
+
+    &__data {
+        display: flex;
+        width: 100%;
+
+
+        &--group,
+        &--imgGroup {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            width: 20%;
+
+            .dataGroup__title {
+                color: #E5E5E5;
+                margin: 0;
+                margin-block: 0;
+            }
+
+            .dataGroup__details {
+                margin-block: 0;
+                margin-left: 1rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            span {
+                color: #FAFAFA;
+                margin: 0.3rem;
+            }
+
+            .orderDetails__img {
+
+                height: 10rem;
+                width: 10rem;
+            }
+        }
+
+        &--imgGroup {
+            align-items: center;
+        }
+
+        &--hgroup {
+            display: flex;
+            width: 100%;
+
+        }
+    }
+}
+
+.evaluation {
+    border: 1px solid #FAFAFA;
+    border-radius: 10px;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+        color: #FAFAFA;
+        font-size: 1.2rem;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+
+        a {
+            color: #EF3651;
+        }
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+
+        &--group {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+
+            .dataGroup__title {
+                color: #E5E5E5;
+                font-weight: 500;
+                margin-block: 0;
+                margin-inline: 0;
+                margin: 0.4rem;
+            }
+
+            .dataGroup__stars {
+                display: flex;
+
+                * {
+                    cursor: pointer;
+                }
+            }
+
+            textarea{
+                border-radius: 5px;
+                width: 100%;
+            }
+        }
+    }
+}

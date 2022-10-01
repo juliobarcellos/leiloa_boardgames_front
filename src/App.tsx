@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
 import LoginModalWrapper from './components/Modals/Login/LoginModalWrapper';
 import RegisterModalWrapper from './components/Modals/Register/RegisterModalWrapper';
 import ForgotPasswordWrapper from './components/Modals/ForgotPassword/ForgotPasswordWrapper';
@@ -11,6 +10,7 @@ import { useState } from 'react';
 import TopBarMenu from './components/TopBarMenu';
 import Checkout from './pages/Checkout';
 import Payment from './pages/Checkout/Payment';
+import OrderDetails from './pages/OrderDetails';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -28,6 +28,7 @@ function App() {
           <Route path='leilao/novo' element={<NewAuctionPage />} />
           <Route path='leilao/1/checkout' element={<Checkout />} />
           <Route path='leilao/1/payment' element={<Payment />} />
+          <Route path='leilao/1/details' element={<OrderDetails />} />
         </Routes>
       </Router>
     </>
