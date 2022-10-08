@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import InputWithIcon from "../InputWithIcon";
 import ModalRWD from "../ModalRWD";
 import { AuthFunction } from "../../../types";
@@ -22,15 +22,15 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   onRegisterRequested
 }) => {
 
-  const [login, setLogin] = useState('')
+  const [user, setLogin] = useState('')
   const [mail, setMail] = useState('')
   const [passwordRepeat, setPasswordRepeat] = useState('');
-  const [password, setPassword] = useState('');
+  const [auth_token, setPassword] = useState('');
   const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
 
-  const onRegisterTrigger = () => {
-    if (validate(passwordRepeat, password)) {
-      onRegisterRequested({ password, login })
+  const onRegisterTrigger = (e:React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (validate(passwordRepeat, auth_token)) {
+      onRegisterRequested({ e, auth_token, user })
     } else {
       setLocalRegisterError("Password entries must match")
     }
@@ -38,7 +38,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      onRegisterTrigger()
+      onRegisterTrigger(e)
     }
   }
 
@@ -60,7 +60,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
       <>
         <InputWithIcon
           onKeyDown={onKeyDown}
-          value={login}
+          value={user}
           onChange={e => setLogin(e.target.value)}
           type="text"
           placeholder='Nome Completo'
@@ -76,7 +76,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         />
         <InputWithIcon
           onKeyDown={onKeyDown}
-          value={password}
+          value={auth_token}
           onChange={e => setPassword(e.target.value)}
           type="password"
           pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ ]).{6,20}$'

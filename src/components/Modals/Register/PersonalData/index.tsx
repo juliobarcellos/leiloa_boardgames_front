@@ -16,9 +16,9 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
     onRegisterRequested
 }) => {
 
-    const [login, setLogin] = useState('')
+    const [user, setLogin] = useState('')
     const [mail, setMail] = useState('')
-    const [password, setPassword] = useState('');
+    const [auth_token, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     const [cpf, setCpf] = useState('');
     const [docType, setDocType] = useState('');
@@ -30,9 +30,9 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
     const [phone, setPhone] = useState('1198887777');
     const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
 
-    const onRegisterTrigger = () => {
-        if (validate(passwordRepeat, password)) {
-            onRegisterRequested({ password, login })
+    const onRegisterTrigger = (e: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        if (validate(passwordRepeat, auth_token)) {
+            onRegisterRequested({ e, auth_token, user })
         } else {
             setLocalRegisterError("Password entries must match")
         }
@@ -40,7 +40,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
-            onRegisterTrigger()
+            onRegisterTrigger(e)
         }
     }
 
@@ -56,7 +56,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
         <div className={styles.DoubleColumnInputs}>
             <InputWithIcon
                 onKeyDown={onKeyDown}
-                value={login}
+                value={user}
                 onChange={e => setLogin(e.target.value)}
                 type="text"
                 placeholder='Nome Completo'
@@ -72,7 +72,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
             />
             <InputWithIcon
                 onKeyDown={onKeyDown}
-                value={password}
+                value={auth_token}
                 onChange={e => setPassword(e.target.value)}
                 type="password"
                 placeholder='Digite sua senha'

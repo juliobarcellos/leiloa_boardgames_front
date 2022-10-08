@@ -21,12 +21,12 @@ const LoginModal: React.FC<LoginModalProps> = ({
   onLoginRequested,
 }) => {
 
-  const [login, setLogin] = useState('')
-  const [password, setPassword] = useState('')
+  const [user, setLogin] = useState('')
+  const [auth_token, setPassword] = useState('')
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      onLoginRequested({ login, password })
+      onLoginRequested({ e, user, auth_token })
     }
   }
 
@@ -40,7 +40,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
       <>
         <InputWithIcon
           onKeyDown={onKeyDown}
-          value={login}
+          value={user}
           onChange={e => setLogin(e.target.value)}
           type="text"
           icon={<LoginIcon width="24px" height="24px" fill="white" />}
@@ -48,13 +48,14 @@ const LoginModal: React.FC<LoginModalProps> = ({
         <InputWithIcon
           onKeyDown={onKeyDown}
           onChange={e => setPassword(e.target.value)}
+          value={auth_token}
           type="password"
           icon={<PasswordIcon width="24px" height="24px" fill="white" />}
         />
         {loginError && <div className={styles.Error}>{loginError}</div>}
         <div className={styles.ButtonContainer}>
           <button className={styles.Button} onClick={onClose}>Cancel</button>
-          <button className={styles.Button} onClick={() => onLoginRequested({ password, login })}>Login</button>
+          <button className={styles.Button} onClick={(e) => onLoginRequested({ e, auth_token, user })}>Login</button>
         </div>
       </>
     </ModalRWD>

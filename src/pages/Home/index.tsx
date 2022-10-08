@@ -3,6 +3,7 @@ import CategoriesBar from '../../components/CategoriesBar';
 import styles from './Home.module.scss';
 import Auctions from '../../components/Auctions';
 import { useRef, useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 interface HomeProps {
     search: string,
@@ -18,6 +19,7 @@ export default function Home({ search, setSearch }: HomeProps) {
             myRef.current && myRef.current.scrollIntoView();
         }
     };
+    const { user, isAuthenticated, isLoading } = useAuth0();
 
     return (
         <div className={styles.home}>

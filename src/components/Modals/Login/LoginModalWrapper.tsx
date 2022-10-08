@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router";
-import { loginUser } from "../../../services/fakeAuthService";
+import { loginUser, useAuthState, useAuthDispatch } from '../../../context';
+import { loginUser as lu } from "../../../services/fakeAuthService";
 import { AuthFunction } from '../../../types';
-import LoginModal from "./LoginModal"
+import LoginModal from "./LoginModal";
 
 const LoginModalWrapper = () => {
 
@@ -15,14 +16,28 @@ const LoginModalWrapper = () => {
 
   const onLoginRequested: AuthFunction = async (loginData) => {
     try {
-      await loginUser(loginData)
+      await lu(loginData)
     } catch (e) {
       setLoginError(e as string);
     }
   }
+  
+  const dispatch = useAuthDispatch();
+
+  const handleLogin: AuthFunction = async ({e, auth_token, user}) => {
+    e.preventDefault()
+    let payload = {auth_token, user}
+    try {
+      let response = await loginUser(dispatch, payload)
+      if(!response.user) return
+      console.log("props.history.push('/dashboard') //navigate to dashboard on success")
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
-    <LoginModal loginError={loginError} isModalVisible={true} onClose={onClose} onLoginRequested={onLoginRequested} />
+    <LoginModal loginError={loginError} isModalVisible={true} onClose={onClose} onLoginRequested={handleLogin} />
   )
 }
 

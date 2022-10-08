@@ -6,10 +6,12 @@ import styles from '../Modals.module.scss';
 import { FiMail } from 'react-icons/fi';
 import { RiLock2Line, RiFacebookBoxFill, RiTwitterFill } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
+import { useAuth0 } from "@auth0/auth0-react";
 
 export interface LoginArgs {
-  password: string;
-  login: string;
+  e: React.MouseEvent<HTMLButtonElement, MouseEvent> | React.KeyboardEvent<HTMLInputElement>;
+  auth_token: string;
+  user: string;
 }
 
 export type LoginFunction = (args: LoginArgs) => Promise<void>;
@@ -27,14 +29,15 @@ const LoginModal: React.FC<LoginModalProps> = ({
   onLoginRequested,
 }) => {
 
-  const [login, setLogin] = useState('')
-  const [password, setPassword] = useState('')
+  const [user, setLogin] = useState('')
+  const [auth_token, setPassword] = useState('')
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      onLoginRequested({ login, password })
+      onLoginRequested({ e, user, auth_token })
     }
   }
+  const { loginWithRedirect } = useAuth0();
 
   return (
     <ModalRWD
@@ -47,7 +50,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
       <>
         <InputWithIcon
           onKeyDown={onKeyDown}
-          value={login}
+          value={user}
           onChange={e => setLogin(e.target.value)}
           type="text"
           placeholder='Digite seu Email'
@@ -56,11 +59,12 @@ const LoginModal: React.FC<LoginModalProps> = ({
         <InputWithIcon
           onKeyDown={onKeyDown}
           onChange={e => setPassword(e.target.value)}
+          value={auth_token}
           type="password"
           placeholder='Digite sua senha'
           icon={<RiLock2Line size={24} />}
         />
-        <button className={styles.Button} onClick={() => onLoginRequested({ password, login })}>Login</button>
+        <button className={styles.Button} onClick={() => loginWithRedirect()}>Login</button>
         {loginError && <div className={styles.Error}>{loginError}</div>}
         <div className={styles.OrLine}>ou</div>
         <p className={styles.SocialLoginTitle}>Faça login usando as redes sociais:</p>

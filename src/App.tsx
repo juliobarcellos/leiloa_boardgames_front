@@ -11,11 +11,12 @@ import TopBarMenu from './components/TopBarMenu';
 import Checkout from './pages/Checkout';
 import Payment from './pages/Checkout/Payment';
 import OrderDetails from './pages/OrderDetails';
+import { AuthProvider } from './context';
 
 function App() {
   const [search, setSearch] = useState('');
   return (
-    <>
+    <AuthProvider>
       <Router>
         <ScrollToTop />
         <TopBarMenu search={search} setSearch={setSearch} />
@@ -31,7 +32,7 @@ function App() {
           <Route path='leilao/1/details' element={<OrderDetails />} />
         </Routes>
       </Router>
-    </>
+    </AuthProvider>
   );
 }
 
