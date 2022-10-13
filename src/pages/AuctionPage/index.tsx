@@ -24,8 +24,8 @@ export default function AuctionPage() {
                 lancesDisponiveis[i] = auction.price + (auction.increment * i);
             }
             userRating = auction.leiloeiro.rating;
-            document.querySelector('.fillRatings')?.setAttribute('style', `${'width: '+percentRating}` )
             percentRating = ((auction.leiloeiro.rating/5.0)*100)+'%;';
+            document.querySelector('.fillRatings')?.setAttribute('style', `${'width: '+percentRating}` )
         }
 
     }, []);
@@ -108,7 +108,7 @@ export default function AuctionPage() {
             <div className="Perguntas">
                 <h3 className="Perguntas__title">Tem uma pergunta?</h3>
                 <textarea className="Perguntas__text" placeholder='Escreva aqui a sua pergunta e tecle "Enter" para enviar' />
-                <h4 className="Perguntas__qtd">12 Perguntas</h4>
+                <h4 className="Perguntas__qtd">{auction.questions?.length} Perguntas</h4>
                 {auction.questions?.map((question, index) => {
                     return (
                         <div key={index} className="Perguntas__pergunta">
