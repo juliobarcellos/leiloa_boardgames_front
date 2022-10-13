@@ -4,7 +4,7 @@ export interface LoginArgs {
   }
   
   const loginUser = ({password, login}:LoginArgs) => new Promise((resolve, reject) => setTimeout(() => {
-    if(login === 'CyberPotato' && password === 'test1234') {
+    if(login === 'admin' && password === 'admin') {
       resolve(true)
     } else {
       reject()

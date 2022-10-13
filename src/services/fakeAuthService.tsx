@@ -1,16 +1,15 @@
 
 import { AuthArgs } from "../types"
 
-
 const loginUser = ({ password, login }: AuthArgs): Promise<boolean> => new Promise((resolve, reject) => setTimeout(() => {
-  if (login === 'CyberPotato' && password === 'test1234') {
+  if (login === 'admin' && password === 'admin') {
     resolve(true)
   } else {
     reject('Credentials are wrong')
   }
 }, 1500))
 
-const registerUser = ({ password, login }: AuthArgs): Promise<boolean> => new Promise((resolve, reject) => setTimeout(() => {
+const registerUser = ({ login }: AuthArgs): Promise<boolean> => new Promise((resolve, reject) => setTimeout(() => {
   if (login === 'CyberPotato') {
     reject('Login already taken')
   } else {
