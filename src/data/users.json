@@ -18,7 +18,7 @@
         "endereco": [
             {
                 "id": 1,
-                "identificacao": "casa",
+                "identificacao": "Casa",
                 "cep": "08500000",
                 "logradouro": "Avenida Governador Janio Quadros",
                 "numero": "111",
@@ -30,7 +30,7 @@
             },
             {
                 "id": 2,
-                "identificacao": "trabalho",
+                "identificacao": "Trabalho",
                 "cep": "08500000",
                 "logradouro": "Avenida Paulista",
                 "numero": "1234",
