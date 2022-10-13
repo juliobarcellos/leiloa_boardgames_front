@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import styles from './Checkout.module.scss';
+import auctions from '../../data/auctions.json';
+import users from '../../data/users.json';
+import { useParams } from "react-router-dom";
 
 export default function Checkout() {
-const [ frete, setFrete ] = useState(0);
-const correios = 35;
-const vendedor = 0;
+    const { id } = useParams();
+    const auction = auctions.find(item => item.id === Number(id));
+    const user = users.find(usuario => usuario.id === 1);
+    const [ userAddress, setUserAddress ] = useState(users.find(usuario => usuario.id === 1)?.endereco.find(endereco => endereco.preferencial === true))
+    const [frete, setFrete] = useState(0);
+
+    const correios = Math.floor((Math.random()*50)+8);
+    const vendedor = 0;
 
     return (
         <main className={styles.checkout}>
@@ -14,12 +22,12 @@ const vendedor = 0;
                     <div className={styles['shipment__address--details']}>
                         <div className={styles.address__group}>
                             <span className={styles['address__group--address']}>
-                                <span className={styles.address__title}>Trabalho</span>
-                                <span>Julio Cesar da Silva Barcellos - (11) 98888-7777</span>
-                                <span>Avenida Governador Janio Quadros, 111</span>
-                                <span>Prédio 22, bloco B, apto 22</span>
-                                <span>Parque Dourado, Ferraz de Vasconcelos, SP</span>
-                                <span>08000-000</span>
+                                <span className={styles.address__title}>{userAddress?.identificacao}</span>
+                                <span>{`${user?.nome} - (${user?.telefone.ddd}) ${user?.telefone.numero}`}</span>
+                                <span>{`${userAddress?.logradouro}, ${userAddress?.numero}`}</span>
+                                <span>{userAddress?.complemento}</span>
+                                <span>{`${userAddress?.bairro}, ${userAddress?.cidade} - ${userAddress?.estado}`}</span>
+                                <span>{userAddress?.cep}</span>
                             </span>
                             <span className={styles['address__group--button']}>Editar ou escolher outro</span>
                         </div>
@@ -53,8 +61,8 @@ const vendedor = 0;
                 </fieldset>
             </section>
             <section className={styles.checkout__orderDetails}>
-                <img className={styles.orderDetails__img} src='https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1760478459733722920/products/RSU001_3D.jpg' />
-                <span className={styles.orderDetails__game}>Rising Sun</span>
+                <img className={styles.orderDetails__img} src={auction?.image} />
+                <span className={styles.orderDetails__game}>{auction?.name}</span>
                 <div className={styles.orderDetails__values}>
                     <div className={styles.orderDetails__group}>
                         <span className={styles.orderDetails__value}>Valor do Produto:</span>
@@ -62,9 +70,9 @@ const vendedor = 0;
                         <span className={styles.orderDetails__value}>Total:</span>
                     </div>
                     <div className={styles.orderDetails__group}>
-                        <span className={styles.orderDetails__value}>R$ 450,00</span>
+                        <span className={styles.orderDetails__value}>R$ {auction?.price},00</span>
                         <span className={styles.orderDetails__value}>R$ {frete},00</span>
-                        <span className={styles.orderDetails__value}>R$ 485,00</span>
+                        <span className={styles.orderDetails__value}>R$ {auction?.price && auction?.price + frete},00</span>
                     </div>
                 </div>
             </section>
