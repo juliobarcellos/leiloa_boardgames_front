@@ -24,11 +24,11 @@ function App() {
           <Route path="login" element={<LoginModalWrapper />} />
           <Route path="register" element={<RegisterModalWrapper />} />
           <Route path="forgot_password" element={<ForgotPasswordWrapper />} />
-          <Route path="leilao/:id" element={<AuctionPage />} />
           <Route path='leilao/novo' element={<NewAuctionPage />} />
-          <Route path='leilao/1/checkout' element={<Checkout />} />
-          <Route path='leilao/1/payment' element={<Payment />} />
-          <Route path='leilao/1/details' element={<OrderDetails />} />
+          <Route path="leilao/:id" element={<AuctionPage />} />
+          <Route path='leilao/:id/checkout' element={<Checkout />} />
+          <Route path='leilao/:id/payment' element={<Payment />} />
+          <Route path='leilao/:id/details' element={<OrderDetails />} />
         </Routes>
       </Router>
     </>
