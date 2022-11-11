@@ -23,7 +23,7 @@ export default function Checkout() {
                         <div className={styles.address__group}>
                             <span className={styles['address__group--address']}>
                                 <span className={styles.address__title}>{userAddress?.identificacao}</span>
-                                <span>{`${user?.nome} - (${user?.telefone.ddd}) ${user?.telefone.numero}`}</span>
+                                <span>{`${user?.nome} - (${user?.telefone.substring(0,1)}) ${user?.telefone.substring(2)}`}</span>
                                 <span>{`${userAddress?.logradouro}, ${userAddress?.numero}`}</span>
                                 <span>{userAddress?.complemento}</span>
                                 <span>{`${userAddress?.bairro}, ${userAddress?.cidade} - ${userAddress?.estado}`}</span>

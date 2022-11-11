@@ -7,13 +7,20 @@ import styles from '../Modals.module.scss';
 
 interface RegisterModalProps {
   onClose: () => void;
-  isModalVisible: boolean;
+  states: {
+    isLoginModalVisible: boolean,
+    setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isRegisterModalVisible: boolean,
+    setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPasswordModalVisible: boolean,
+    setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+  };
   onResetPasswordRequested: ResetPasswordFunction;
 }
 
 const ForgotPasswordModal: React.FC<RegisterModalProps> = ({
   onClose,
-  isModalVisible,
+  states,
   onResetPasswordRequested
 }) => {
 
@@ -37,7 +44,7 @@ const ForgotPasswordModal: React.FC<RegisterModalProps> = ({
   return (
     <ModalRWD
       onBackdropClick={onClose}
-      isModalVisible={isModalVisible}
+      isModalVisible={states.isPasswordModalVisible}
       header="Esqueceu a senha?"
       message="Digite seu e-mail que enviaremos o link para alterar a senha"
     >

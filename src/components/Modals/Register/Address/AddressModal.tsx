@@ -1,13 +1,30 @@
-import { useState } from 'react';
-import { AuthFunction } from "../../../../types";
+import { useContext, useState } from 'react';
+import { userContext } from '../../../../context/user';
+import { AuthFunction, AddressType } from "../../../../types";
+import DoubleColumnModalRWD from '../../DoubleColumnModalRWD';
 import styles from '../../Modals.module.scss';
 
 interface AddressModalProps {
+    onClose: () => void;
+    states: {
+      isLoginModalVisible: boolean,
+      setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+      isRegisterModalVisible: boolean,
+      setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+      isPDataModalVisible: boolean,
+      setIsPDataModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+      isAddressModalVisible: boolean,
+      setIsAddressModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+      isPasswordModalVisible: boolean,
+      setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+    };
     registerError?: string;
     onRegisterRequested: AuthFunction;
 }
 
 const AddressModal: React.FC<AddressModalProps> = ({
+    onClose,
+    states,
     registerError,
     onRegisterRequested
 }) => {
@@ -20,10 +37,25 @@ const AddressModal: React.FC<AddressModalProps> = ({
     const [bairro, setBairro] = useState('');
     const [cidade, setCidade] = useState('');
     const [uf, setUf] = useState('');
-    const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
+    const [localRegisterError, setLocalRegisterError] = useState<string | undefined>();
+    const user = useContext(userContext)
+
 
     const onRegisterTrigger = () => {
-
+        let endereco: AddressType[] =[{
+            id: undefined,
+            identificacao: addressId,
+            cep: cep,
+            logradouro: streetAddress,
+            numero: addressNumber,
+            complemento: compl,
+            bairro: bairro,
+            cidade: cidade,
+            estado: uf,
+            preferencial: true
+        }];
+        user.endereco = endereco;
+        console.log(user)
     }
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -33,7 +65,13 @@ const AddressModal: React.FC<AddressModalProps> = ({
     }
 
     return (
-        <div className={styles.AddressContainer}>
+        <DoubleColumnModalRWD
+            onBackdropClick={onClose}
+            isModalVisible={states.isAddressModalVisible}
+            header="Endereço"
+            message="Todos os campos são obrigatórios"
+        >
+            <div className={styles.AddressContainer}>
                 <label htmlFor='addressId'>Identificação</label>
                 <input
                     className={styles.AddressInput}
@@ -116,11 +154,13 @@ const AddressModal: React.FC<AddressModalProps> = ({
                     type="text"
                     placeholder='SP'
                 />
-            <button className={styles.Button} onClick={onRegisterTrigger}>Finalizar Cadastro</button>
+                <button className={styles.Button} onClick={onRegisterTrigger}>Finalizar Cadastro</button>
+            </div>
             {registerError && <p>{registerError}</p>}
             {localRegisterError && <p>{localRegisterError}</p>}
 
-        </div>
+
+        </DoubleColumnModalRWD>
     )
 }
 

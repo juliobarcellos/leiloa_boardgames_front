@@ -60,8 +60,8 @@
 
     border-radius: 7px;
     box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    width: 750px;
+    padding: 30px;
+    width: 800px;
     font-size: 26px;
 
     &::before {
@@ -171,7 +171,7 @@
     flex-wrap: wrap;
 
     .InputContainer {
-        width: 45%;
+        width: 32%;
     }
 
     ::-webkit-calendar-picker-indicator {
@@ -213,6 +213,12 @@
             opacity: 1;
         }
     }
+}
+
+.FormLabel{
+    font-size: 1rem;
+    margin: 0.5rem;
+    width: 10%;
 }
 
 ::placeholder,
@@ -349,17 +355,13 @@
     margin-top: 2rem;
     font-size: 0.8rem;
 
-    a {
+    span {
+        cursor: pointer;
         margin: 0 auto;
         padding: 0.5rem;
         color: #EF3651;
         text-decoration: none;
         font-weight: bold;
-
-        &:visited {
-            color: #EF3651;
-            text-decoration: none;
-        }
     }
 }
 
@@ -413,7 +415,7 @@
 
     label {
         font-size: 1rem;
-        width: 30%;
+        width: 15%;
     }
 }
 
@@ -563,4 +565,8 @@
             font-weight: bold;
         }
     }
+}
+
+.formData{
+    display: contents;
 }

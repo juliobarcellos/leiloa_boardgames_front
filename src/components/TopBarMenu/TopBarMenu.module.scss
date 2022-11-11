@@ -7,21 +7,36 @@
 
 .menu__link{
     align-items: center;
+    cursor: pointer;
+    min-height: 4.5rem;
     color: #ABB4BD;
     display: flex;
     flex-direction: column;
-    margin: 1rem 1.2rem;
+    justify-content: center;
+    margin: 0.5rem 1.2rem;
     text-decoration: none;
     &:hover {
         color: #EF3651;
+    }
+
+    span{
+        margin-top: 0.3rem;
+        text-align: center;
     }
 } 
 
 .menu__link--Ativo{
     align-items: center;
+    min-height: 4.5rem;
     color: #EF3651;
     display: flex;
     flex-direction: column;
-    margin: 1rem 1.2rem;
+    justify-content: center;
+    margin: 0.5rem 1.2rem;
     text-decoration: none;
+
+    span{
+        margin-top: 0.3rem;
+        text-align: center;
+    }
 }

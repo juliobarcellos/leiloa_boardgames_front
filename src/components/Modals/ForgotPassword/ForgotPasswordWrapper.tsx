@@ -1,14 +1,24 @@
-import { useNavigate } from "react-router";
 import { forgotPassword } from "../../../services/fakeAuthService";
 import { ResetPasswordFunction } from "../../../types";
 import ForgotPasswordModal from "./ForgotPasswordModal";
 
-const ForgotPassword = () => {
+interface StateProps {
+  states: {
+    isLoginModalVisible: boolean,
+    setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isRegisterModalVisible: boolean,
+    setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPasswordModalVisible: boolean,
+    setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+  }
+}
 
-  const navigate = useNavigate();
+const ForgotPassword = (props: StateProps) => {
 
   const onClose = () => {
-    navigate("/")
+    props.states.setIsLoginModalVisible(false)
+    props.states.setIsPasswordModalVisible(false)
+    props.states.setIsRegisterModalVisible(false)    
   }
 
   const onResetPasswordRequested: ResetPasswordFunction = async (login) => {
@@ -17,7 +27,7 @@ const ForgotPassword = () => {
 
   return (
     <ForgotPasswordModal
-      isModalVisible={true}
+      states={props.states}
       onClose={onClose}
       onResetPasswordRequested={onResetPasswordRequested}
     />

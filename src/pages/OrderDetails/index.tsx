@@ -1,10 +1,12 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styles from './OrderDetails.module.scss';
 import { FaStar } from 'react-icons/fa';
+import auctions from '../../data/auctions.json';
 
 export default function OrderDetails() {
 
+    const { id } = useParams();
     const [orderStatus, setOrderStatus] = useState('created');
     const [starCValue, setStarCValue] = useState(0);
     const [starCHoverValue, setStarCHoverValue] = useState<number | undefined>(undefined);
@@ -12,6 +14,7 @@ export default function OrderDetails() {
     const [starVHoverValue, setStarVHoverValue] = useState<number | undefined>(undefined);
     const customerStars = Array(5).fill(0);
     const vendorStars = Array(5).fill(0);
+    const auction = auctions.find(item => item.id === Number(id));
 
     useLayoutEffect(() => {
         let divElement = undefined;
@@ -65,7 +68,7 @@ export default function OrderDetails() {
     return (
         <main>
             <section className={styles.orderDetails}>
-                <span className={styles.orderDetails__orderNumber}>Pedido: 00001 (Referente ao Leilão: <Link to='#'>00001</Link>)</span>
+                <span className={styles.orderDetails__orderNumber}>Pedido: 00001 (Referente ao Leilão: <Link to={`/leilao/${id}`}>0000{id}</Link>)</span>
                 <section className={styles.orderDetails__statusBar}>
                     <div className={styles['orderDetails__step--order']}>
                         <div className={styles['orderDetails__step--dot']}></div>
@@ -109,8 +112,8 @@ export default function OrderDetails() {
                 </section>
                 <section className={styles.orderDetails__data}>
                     <div className={styles['orderDetails__data--imgGroup']}>
-                        <img className={styles['orderDetails__img']} src='https://mlb-s2-p.mlstatic.com/427901-MLB20434524644_092015-C.jpg' alt='' />
-                        <h4 className={styles['dataGroup__title']}>Agricola</h4>
+                        <img className={styles['orderDetails__img']} src={auction?.image} alt='' />
+                        <h4 className={styles['dataGroup__title']}>{auction?.name}</h4>
                         <span>10/09/2022</span>
                     </div>
                     <div className={styles['orderDetails__data--group']}>
@@ -123,11 +126,11 @@ export default function OrderDetails() {
                     </div>
                     <div className={styles['orderDetails__data--group']}>
                         <h4 className={styles['dataGroup__title']}>Lance Vencedor</h4>
-                        <p className={styles['dataGroup__details']}>R$ 440,00</p>
+                        <p className={styles['dataGroup__details']}>R$ {auction?.price}</p>
                         <h4 className={styles['dataGroup__title']}>Custo Frete</h4>
-                        <p className={styles['dataGroup__details']}>R$ 31,14</p>
+                        <p className={styles['dataGroup__details']}>R$ {auction?.shipmentValue}</p>
                         <h4 className={styles['dataGroup__title']}>Total</h4>
-                        <p className={styles['dataGroup__details']}>R$ 471,14</p>
+                        <p className={styles['dataGroup__details']}>R$ {auction?.price && auction.price + auction.shipmentValue}</p>
                     </div>
                     <div className={styles['orderDetails__data--group']}>
                         <h4 className={styles['dataGroup__title']}>Forma de pagamento</h4>
@@ -157,7 +160,7 @@ export default function OrderDetails() {
                     <div className={styles['evaluation__data--group']}>
                         <h4 className={styles['dataGroup__title']}>Avaliação do Vendedor</h4>
                         <div className={styles['dataGroup__stars']}>
-                            {customerStars.map((_, index) => {
+                            {vendorStars.map((_, index) => {
                                 return (
                                     <FaStar
                                         key={index}

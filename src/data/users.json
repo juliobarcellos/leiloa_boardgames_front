@@ -11,10 +11,7 @@
         "orgaoExpedidor": "SSP",
         "estadoExpedidor": "SP",
         "dataEmissao": "11/11/2011",
-        "telefone": {
-            "ddd": "11",
-            "numero": "988887777"
-        },
+        "telefone": "11988887777",
         "endereco": [
             {
                 "id": 1,

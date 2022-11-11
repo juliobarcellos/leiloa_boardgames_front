@@ -1,16 +1,27 @@
 import { useState } from 'react'
-import { useNavigate } from "react-router";
 import { loginUser } from "../../../services/fakeAuthService";
 import { AuthFunction } from '../../../types';
 import LoginModal from "./LoginModal"
 
-const LoginModalWrapper = () => {
+interface StateProps {
+  states: {
+    isLoginModalVisible: boolean,
+    setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isRegisterModalVisible: boolean,
+    setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPasswordModalVisible: boolean,
+    setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+  }
+}
+
+const LoginModalWrapper = (props: StateProps) => {
 
   const [loginError, setLoginError] = useState<string | undefined>()
 
-  const navigate = useNavigate();
   const onClose = () => {
-    navigate("/")
+    props.states.setIsLoginModalVisible(false)
+    props.states.setIsPasswordModalVisible(false)
+    props.states.setIsRegisterModalVisible(false)
   }
 
   const onLoginRequested: AuthFunction = async (loginData) => {
@@ -22,7 +33,7 @@ const LoginModalWrapper = () => {
   }
 
   return (
-    <LoginModal loginError={loginError} isModalVisible={true} onClose={onClose} onLoginRequested={onLoginRequested} />
+    <LoginModal loginError={loginError} states={props.states} onClose={onClose} onLoginRequested={onLoginRequested} />
   )
 }
 

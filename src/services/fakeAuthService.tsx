@@ -5,7 +5,7 @@ const loginUser = ({ password, login }: AuthArgs): Promise<boolean> => new Promi
   if (login === 'admin' && password === 'admin') {
     resolve(true)
   } else {
-    reject('Credentials are wrong')
+    reject('O usuário e/ou senha digitados estão incorretos')
   }
 }, 1500))
 

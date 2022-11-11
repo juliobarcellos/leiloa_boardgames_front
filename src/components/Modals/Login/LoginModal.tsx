@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ModalRWD from '../ModalRWD';
 import InputWithIcon from '../InputWithIcon';
-import { Link } from 'react-router-dom';
 import styles from '../Modals.module.scss';
 import { FiMail } from 'react-icons/fi';
 import { RiLock2Line, RiFacebookBoxFill, RiTwitterFill } from 'react-icons/ri';
@@ -16,13 +15,21 @@ export type LoginFunction = (args: LoginArgs) => Promise<void>;
 
 interface LoginModalProps {
   onClose: () => void;
-  isModalVisible: boolean;
   loginError?: string;
   onLoginRequested: LoginFunction;
+  states: {
+    isLoginModalVisible: boolean,
+    setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isRegisterModalVisible: boolean,
+    setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPasswordModalVisible: boolean,
+    setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+  }
 }
 
 const LoginModal: React.FC<LoginModalProps> = ({
   loginError,
+  states,
   onClose,
   onLoginRequested,
 }) => {
@@ -39,7 +46,7 @@ const LoginModal: React.FC<LoginModalProps> = ({
   return (
     <ModalRWD
       onBackdropClick={onClose}
-      isModalVisible={true}
+      isModalVisible={states.isLoginModalVisible}
       header="Login"
       message="Faça login para continuar"
     >
@@ -77,10 +84,10 @@ const LoginModal: React.FC<LoginModalProps> = ({
         </div>
 
         <div className={styles.ModalLinks}>
-          <Link to="/forgot_password">Esqueceu a senha?</Link>
+          <span onClick={() => {states.setIsLoginModalVisible(false); states.setIsPasswordModalVisible(true)}}>Esqueceu a senha?</span>
           <div>
             Não tem conta? 
-            <Link to="/register">Registrar</Link>
+            <span onClick={() => {states.setIsLoginModalVisible(false); states.setIsRegisterModalVisible(true)}}>Registrar</span>
           </div>
         </div>
       </>

@@ -1,49 +1,73 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import InputWithIcon from "../InputWithIcon";
 import ModalRWD from "../ModalRWD";
 import { AuthFunction } from "../../../types";
-import { Link } from 'react-router-dom';
 import { FiMail, FiUser } from 'react-icons/fi';
 import { RiLock2Line, RiFacebookBoxFill, RiTwitterFill } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
 import styles from '../Modals.module.scss';
+import { userContext } from '../../../context/user';
 
 interface RegisterModalProps {
   onClose: () => void;
-  isModalVisible: boolean;
+  states: {
+    isLoginModalVisible: boolean,
+    setIsLoginModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isRegisterModalVisible: boolean,
+    setIsRegisterModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPDataModalVisible: boolean,
+    setIsPDataModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isAddressModalVisible: boolean,
+    setIsAddressModalVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isPasswordModalVisible: boolean,
+    setIsPasswordModalVisible: React.Dispatch<React.SetStateAction<boolean>>
+  };
   registerError?: string;
   onRegisterRequested: AuthFunction;
 }
 
 const RegisterModal: React.FC<RegisterModalProps> = ({
   onClose,
-  isModalVisible,
+  states,
   registerError,
   onRegisterRequested
 }) => {
 
-  const [login, setLogin] = useState('')
+  const [nome, setNome] = useState('')
   const [mail, setMail] = useState('')
   const [passwordRepeat, setPasswordRepeat] = useState('');
   const [password, setPassword] = useState('');
   const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
+  const user = useContext(userContext)
 
-  const onRegisterTrigger = () => {
+  const onRegisterTrigger = (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
     if (validate(passwordRepeat, password)) {
+      const login = mail;
       onRegisterRequested({ password, login })
+      user.nome = nome;
+      user.email = mail;
+      user.senha = password;
+      setNome('');
+      setMail('');
+      setPassword('');
+      setPasswordRepeat('');
+      setLocalRegisterError('');
+      states.setIsRegisterModalVisible(false);
+      states.setIsPDataModalVisible(true);
     } else {
-      setLocalRegisterError("Password entries must match")
+      setLocalRegisterError("As senhas não conferem")
     }
   }
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      onRegisterTrigger()
+      onRegisterTrigger(e)
     }
   }
 
   const validate = (passwordRepeat: string, password: string) => {
-    if (passwordRepeat !== password) {
+    if (passwordRepeat !== password || password == '' || passwordRepeat == '') {
       return false
     } else {
       return true;
@@ -53,18 +77,20 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   return (
     <ModalRWD
       onBackdropClick={onClose}
-      isModalVisible={isModalVisible}
+      isModalVisible={states.isRegisterModalVisible}
       header="Novo Usuário"
       message="Crie sua conta"
     >
       <>
+      <form className={styles.formData} onSubmit={e => onRegisterTrigger(e)}>
         <InputWithIcon
           onKeyDown={onKeyDown}
-          value={login}
-          onChange={e => setLogin(e.target.value)}
+          value={nome}
+          onChange={e => setNome(e.target.value)}
           type="text"
           placeholder='Nome Completo'
           icon={<FiUser size={24} />}
+          required
         />
         <InputWithIcon
           onKeyDown={onKeyDown}
@@ -73,6 +99,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           type="mail"
           placeholder='Digite seu Email'
           icon={<FiMail size={24} />}
+          required
         />
         <InputWithIcon
           onKeyDown={onKeyDown}
@@ -83,6 +110,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           title='A senha deve conter de 6 a 20 caracteres, deve conter ao menos uma letra maiúscula, uma letra minúscula e um número'
           placeholder='Digite sua senha'
           icon={<RiLock2Line size={24} />}
+          required
         />
         <InputWithIcon
           onKeyDown={onKeyDown}
@@ -93,8 +121,10 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
           title='A senha deve conter de 6 a 20 caracteres, deve conter ao menos uma letra maiúscula, uma letra minúscula e um número'
           placeholder='Digite sua senha novamente'
           icon={<RiLock2Line size={24} />}
+          required
         />
-        <button className={styles.Button} onClick={onRegisterTrigger}>Iniciar Cadastro</button>
+        <button className={styles.Button} type="submit">Iniciar Cadastro</button>
+        </form>
         {registerError && <p>{registerError}</p>}
         {localRegisterError && <p>{localRegisterError}</p>}
 
@@ -115,7 +145,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
         <div className={styles.ModalLinks}>
           <div>
             Já possui conta?
-            <Link to="/login">Fazer Login</Link>
+            <span onClick={() => {states.setIsRegisterModalVisible(false); states.setIsLoginModalVisible(true)}}>Fazer Login</span>
           </div>
         </div>
       </>
