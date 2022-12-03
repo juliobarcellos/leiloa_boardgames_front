@@ -30,5 +30,12 @@
         background-color: #09090c;
         padding: 0.5rem;
     }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        color: #fafafa;
+    }
 }
 
