@@ -1,0 +1,34 @@
+.footer{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    background-color: #181820;
+    height: 300px;
+    &__Container{
+        padding: 50px;
+        display: flex;
+        width: 13%;
+        color: #fafafa;
+        
+        flex-direction: column;
+
+        &:nth-child(1){
+            align-items: center;
+        }
+
+        span{
+ 
+            margin-bottom: 1rem;           
+            color: #e33a52;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    &__CopyRights{
+        width: 100%;
+        text-align: center;
+        background-color: #09090c;
+        padding: 0.5rem;
+    }
+}
+

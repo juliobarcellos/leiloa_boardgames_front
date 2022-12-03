@@ -9,6 +9,7 @@ import Checkout from './pages/Checkout';
 import Payment from './pages/Checkout/Payment';
 import OrderDetails from './pages/OrderDetails';
 import initialUserCtx, { userContext } from './context/user';
+import Footer from './components/Footer';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -26,6 +27,7 @@ function App() {
             <Route path='leilao/:id/payment' element={<Payment />} />
             <Route path='leilao/:id/details' element={<OrderDetails />} />
           </Routes>
+          <Footer/>
         </userContext.Provider>
       </Router>
     </>
