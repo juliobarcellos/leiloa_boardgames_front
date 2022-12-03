@@ -8,7 +8,7 @@ import TopBarMenu from './components/TopBarMenu';
 import Checkout from './pages/Checkout';
 import Payment from './pages/Checkout/Payment';
 import OrderDetails from './pages/OrderDetails';
-import { userContext, initialUser } from './context/user';
+import initialUserCtx, { userContext } from './context/user';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -16,7 +16,7 @@ function App() {
     <>
       <Router>
         <ScrollToTop />
-        <userContext.Provider value={initialUser} >
+        <userContext.Provider value={initialUserCtx} >
           <TopBarMenu search={search} setSearch={setSearch} />
           <Routes>
             <Route path='/' element={<Home search={search} setSearch={setSearch} />} />

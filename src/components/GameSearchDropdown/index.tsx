@@ -22,9 +22,9 @@ export default function GameSearchDropdown({ search, setSearch }: GameSearchDrop
         setSearch(game);
     }
 
-    function onSearchClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    function onSearchClick(e: React.MouseEvent<HTMLDivElement, MouseEvent> | React.FocusEvent<HTMLDivElement, Element>) {
         setIsOpen(true);
-        stopPropagation(e);
+        e.stopPropagation();
     }
 
     function onBackdropClick() {
@@ -44,7 +44,7 @@ export default function GameSearchDropdown({ search, setSearch }: GameSearchDrop
 
     return (
         <section className={styles.Dropdown} onClick={stopPropagation}>
-            <div className={styles.Dropdown__input} onClick={e => onSearchClick(e)} >
+            <div className={styles.Dropdown__input} onFocus={e => onSearchClick(e)} onClick={e => onSearchClick(e)} >
                 <input
                     value={search}
                     onChange={evento => setSearch(evento.target.value)}

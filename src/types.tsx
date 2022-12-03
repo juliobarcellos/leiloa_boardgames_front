@@ -1,5 +1,3 @@
-import users from './data/users.json';
-
 export interface AuthArgs {
     password: string;
     login: string;
@@ -9,10 +7,7 @@ export interface AuthArgs {
   
   export type ResetPasswordFunction = (login: string) => Promise<void>;
 
-  export type UserType = typeof users[0];
-
   export interface AddressType {
-    id?: number,
     identificacao: string,
     cep: string,
     logradouro: string,
@@ -24,12 +19,12 @@ export interface AuthArgs {
     preferencial: boolean
   }
 
-  export interface UserT {
+  export interface UserType{
     id?: number,
     nome: string,
     email: string,
     senha: string,
-    dataNasc: string,
+    dataNascimento: string,
     cpf: string,
     tipoDocumento: string,
     numDocumento: string,
@@ -37,7 +32,7 @@ export interface AuthArgs {
     estadoExpeditor: string,
     dataEmissao: string,
     telefone: string,
-    endereco?: AddressType[],
+    enderecos?: AddressType[],
     image?: string,
     favoritos?: number[],
     compras?: number[],

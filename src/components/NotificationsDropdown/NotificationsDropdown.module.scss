@@ -11,14 +11,14 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        position: relative;
         margin: 0;
         padding: 0.2rem;
         transition: ease-in-out;
         position: absolute;
         min-height: 4rem;
         width: 22rem;
-        top: 5.3rem;
+        top: 6rem;
+        right: 2rem;
         z-index: 4;
 
         &--notification {
