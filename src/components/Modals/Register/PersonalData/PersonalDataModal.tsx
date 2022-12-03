@@ -32,15 +32,15 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
     registerError,
     onRegisterRequested
 }) => {
-    const user = useContext(userContext)
+    const context = useContext(userContext)
 
-    const [nome, setNome] = useState(user.nome)
-    const [mail, setMail] = useState(user.email)
-    const [password, setPassword] = useState(user.senha);
-    const [passwordRepeat, setPasswordRepeat] = useState(user.senha);
+    const [nome, setNome] = useState(context.user.nome)
+    const [mail, setMail] = useState(context.user.email)
+    const [password, setPassword] = useState(context.user.senha);
+    const [passwordRepeat, setPasswordRepeat] = useState(context.user.senha);
     const [cpf, setCpf] = useState('');
     const [docType, setDocType] = useState('');
-    const [document, setDocument] = useState('');
+    const [documento, setDocumento] = useState('');
     const [expdOrg, setExpdOrg] = useState('');
     const [uf, setUf] = useState('');
     const [birthDate, setBirthDate] = useState('');
@@ -53,15 +53,14 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
         if (validate(passwordRepeat, password)) {
             let login = nome;
             onRegisterRequested({ password, login })
-            user.cpf=cpf;
-            user.numDocumento=docType;
-            user.numDocumento=document;
-            user.orgaoExpeditor=expdOrg;
-            user.estadoExpeditor=uf;
-            user.dataNasc=birthDate;
-            user.dataEmissao=expeditionDate;
-            user.telefone=phone;
-            console.log(user);
+            context.user.cpf=cpf;
+            context.user.tipoDocumento=docType;
+            context.user.numDocumento=documento;
+            context.user.orgaoExpeditor=expdOrg;
+            context.user.estadoExpeditor=uf;
+            context.user.dataNascimento=birthDate;
+            context.user.dataEmissao=expeditionDate;
+            context.user.telefone=phone;
             states.setIsPDataModalVisible(false)
             states.setIsAddressModalVisible(true)
         } else {
@@ -71,7 +70,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
-            onRegisterTrigger(e)
+            e.preventDefault();
         }
     }
 
@@ -91,7 +90,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
             message="Todos os campos são obrigatórios"
         >
             <form className={styles.DoubleColumnInputs} onSubmit={e => onRegisterTrigger(e)}>
-                <label htmlFor='nomeInput' className={styles.FormLabel} onClick={() => console.log(user)}>Nome</label>
+                <label htmlFor='nomeInput' className={styles.FormLabel}>Nome</label>
                 <InputWithIcon
                     id='nomeInput'
                     onKeyDown={onKeyDown}
@@ -171,8 +170,8 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
                 <InputWithIcon
                     id='docNumberInput'
                     onKeyDown={onKeyDown}
-                    value={document}
-                    onChange={e => setDocument(e.target.value)}
+                    value={documento}
+                    onChange={e => setDocumento(e.target.value)}
                     type="text"
                     placeholder='Digite o número do documento'
                     icon={<HiOutlineIdentification size={24} />}
@@ -220,7 +219,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
                     icon={<FiPhone size={24} />}
                     required
                 />
-                <button className={styles.Button} type='submit'>Próximo</button>
+                <button className={styles.Button} id="submitButton" type='submit'>Próximo</button>
             </form>
             {registerError && <p>{registerError}</p>}
             {localRegisterError && <p>{localRegisterError}</p>}

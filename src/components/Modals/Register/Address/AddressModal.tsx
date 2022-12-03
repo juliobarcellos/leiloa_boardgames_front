@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { userContext } from '../../../../context/user';
+import userService from '../../../../services/userService';
 import { AuthFunction, AddressType } from "../../../../types";
 import DoubleColumnModalRWD from '../../DoubleColumnModalRWD';
 import styles from '../../Modals.module.scss';
@@ -38,12 +39,11 @@ const AddressModal: React.FC<AddressModalProps> = ({
     const [cidade, setCidade] = useState('');
     const [uf, setUf] = useState('');
     const [localRegisterError, setLocalRegisterError] = useState<string | undefined>();
-    const user = useContext(userContext)
+    const context = useContext(userContext)
 
 
     const onRegisterTrigger = () => {
         let endereco: AddressType[] =[{
-            id: undefined,
             identificacao: addressId,
             cep: cep,
             logradouro: streetAddress,
@@ -54,8 +54,16 @@ const AddressModal: React.FC<AddressModalProps> = ({
             estado: uf,
             preferencial: true
         }];
-        user.endereco = endereco;
-        console.log(user)
+        context.user.enderecos = endereco;
+        let retornoUser = userService.create(context.user);
+        retornoUser.then(() => {
+            context.logado = true;
+            states.setIsAddressModalVisible(false)
+        }).catch((e) => {
+            console.error(e)
+            setLocalRegisterError(e)
+        })
+        console.log(retornoUser);
     }
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

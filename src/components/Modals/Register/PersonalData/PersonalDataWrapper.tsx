@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import PersonalDataModal from './PersonalDataModal';
 import { registerUser } from '../../../../services/fakeAuthService';
 import { AuthFunction } from '../../../../types';
+import { initialUser, userContext } from '../../../../context/user';
 
 interface Props {
   states: {
@@ -21,6 +22,7 @@ interface Props {
 const PersonalDataWrapper = (props: Props) => {
 
   const [registerError, setRegisterError] = useState<string | undefined>();
+  const context = useContext(userContext);
 
   const onClose = () => {
     props.states.setIsLoginModalVisible(false)
@@ -28,6 +30,8 @@ const PersonalDataWrapper = (props: Props) => {
     props.states.setIsRegisterModalVisible(false)
     props.states.setIsPDataModalVisible(false)
     props.states.setIsAddressModalVisible(false)
+    context.user = initialUser;
+    context.logado = false;
   }
 
   const onRegisterRequested: AuthFunction = async (registerData) => {

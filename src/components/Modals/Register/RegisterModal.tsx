@@ -38,16 +38,16 @@ const RegisterModal: React.FC<RegisterModalProps> = ({
   const [passwordRepeat, setPasswordRepeat] = useState('');
   const [password, setPassword] = useState('');
   const [localRegisterError, setLocalRegisterError] = useState<string | undefined>()
-  const user = useContext(userContext)
+  const context = useContext(userContext)
 
   const onRegisterTrigger = (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (validate(passwordRepeat, password)) {
       const login = mail;
       onRegisterRequested({ password, login })
-      user.nome = nome;
-      user.email = mail;
-      user.senha = password;
+      context.user.nome = nome;
+      context.user.email = mail;
+      context.user.senha = password;
       setNome('');
       setMail('');
       setPassword('');
