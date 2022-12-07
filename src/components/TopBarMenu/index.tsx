@@ -46,12 +46,6 @@ export default function TopBarMenu(props: TopBarMenuProps) {
         setIsLoginModalVisible(wasModalVisible => !wasModalVisible)
     }
 
-    const toggleNotifications = () => {
-        setIsNotificationsVisible(false);
-        context.setIsNotificationsVisible(false);
-        console.log(context.isNotificationsVisible)
-    }
-
     return (
         <nav className={styles.menu}>
             <IconContext.Provider
@@ -85,7 +79,7 @@ export default function TopBarMenu(props: TopBarMenuProps) {
                     </NavLink>
                 }
                 {context.logado &&
-                    <div className={styles.menu__link} onClick={() => { setIsNotificationsVisible(true); console.log(`aberto ${isNotificationsVisible}`) }}>
+                    <div className={styles.menu__link} onClick={() => { setIsNotificationsVisible(true) }}>
                         <MdNotifications />
                         <span>Notificações</span>
 
@@ -101,7 +95,7 @@ export default function TopBarMenu(props: TopBarMenuProps) {
                 {context.logado &&
                     <div className={styles.menu__link}>
                         <MdAccountCircle />
-                        <span>Perfil</span>
+                        <span>{context.user.nome.substring(0, context.user.nome.indexOf(" "))}</span>
                     </div>
                 }
             </IconContext.Provider>

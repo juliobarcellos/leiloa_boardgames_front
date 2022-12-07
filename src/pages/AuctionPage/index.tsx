@@ -1,48 +1,104 @@
 import TimeLeftBox from "../../components/TimeLeftBox";
 import ImageGallery from 'react-image-gallery';
-import { BsTruck } from 'react-icons/bs';
-import auctions from '../../data/auctions.json'
+import { BsTruck, BsHeart, BsHeartFill } from 'react-icons/bs';
 import './AuctionPage.scss';
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BidModal from "../../components/Modals/Bid/BidModal";
+import auctionService from "../../services/auctionService";
+import { AuctionType, ImageCarouselType } from "../../types";
+import { userContext } from "../../context/user";
+import ReactLoading from 'react-loading';
 
 export default function AuctionPage() {
     const { id } = useParams();
-    const auction = auctions.find(item => item.id === Number(id));
+    const [auction, setAuction] = useState<AuctionType>({} as AuctionType);
     const [lancesDisponiveis, setLancesDisponiveis] = useState<number[]>([]);
     const [isBidModalVisible, setIsBidModalVisible] = useState(false);
     const [isShipmentModalVisible, setIsShipmentModalVisible] = useState(false);
     const [bidValue, setBidValue] = useState(0);
+    const [imagens, setImagens] = useState<ImageCarouselType[]>([]);
+    const [carregado, setCarregado] = useState(false);
+    const [favorito, setFavorito] = useState(false);
+    const context = useContext(userContext);
     let userRating = 5;
     let percentRating = '100%';
 
     useEffect(() => {
-        if (auction) {
+        async function teste() {
+            if (id) {
+                const response = await auctionService.getByID(id)
+                let jsonLeilao = JSON.stringify(response.data, null, '  ')
+                setAuction(JSON.parse(jsonLeilao));
+                setCarregado(true)
+            }
+        }
+        teste();
+    }, []);
+
+    useEffect(() => {
+        if (auction !== undefined && auction.leiloeiro !== undefined) {
             setBidValue(auction.price + auction.increment)
             for (let i = 1; i <= 5; i++) {
                 lancesDisponiveis[i] = auction.price + (auction.increment * i);
             }
+            let pics: Array<ImageCarouselType> = [];
+            auction.images?.map(imagem => {
+                let novaImagem = {
+                    original: typeof imagem.original === 'string' ? imagem.original : "undefined",
+                    originalWidth: 480,
+                    originalHeight: 480,
+                    thumbnail: typeof imagem.original === 'string' ? imagem.original : "undefined",
+                    thumbnailWidth: 80,
+                    thumbnailHeight: 80
+                }
+                pics.push(novaImagem);
+            });
+            setImagens(pics);
             userRating = auction.leiloeiro.rating;
-            percentRating = ((auction.leiloeiro.rating/5.0)*100)+'%;';
-            document.querySelector('.fillRatings')?.setAttribute('style', `${'width: '+percentRating}` )
+            percentRating = ((auction.leiloeiro.rating / 5.0) * 100) + '%;';
+            document.querySelector('.fillRatings')?.setAttribute('style', `${'width: ' + percentRating}`)
+            // setCarregado(true)
+            if (context.logado) {
+                if (context.user.favoritos?.find(item => item === Number(auction.idJogo))) {
+                    setFavorito(true);
+                }
+            }
+        }
+    }, [auction])
+
+    function handleFavorito() {
+        if (context.logado && context.user.favoritos) {
+            setFavorito(wasFavorito => !wasFavorito)
+            !favorito ? context.user.favoritos.push(Number(auction.idJogo)) : context.user.favoritos = context.user.favoritos.filter(jogo => jogo !== Number(auction.idJogo));
+        } else {
+            alert("Para selecionar um jogo como favorito é preciso estar logado, efetue o login.")
         }
 
-    }, []);
+    }
 
     if (!auction) {
         return (
             <div>404 Not Found</div>
         )
-    }
+    } 
+    // else if (!carregado){
+        // return (
+        //     <ReactLoading className='loadingComp' type={"spinningBubbles"} color="#FAFAFA" height={"15%"} width={"15%"} />
+        // )
+    // }
     return (
         <>
             <div className='dadosLeilao'>
                 <div className='dadosLeilao__galeria'>
-                    <ImageGallery thumbnailPosition="left" items={auction.images} />
+                    <ImageGallery thumbnailPosition="left" items={imagens} />
                 </div>
                 <div className="dadosLeilao__dados">
-                    <h3 className="dados__titulo">{auction.name}</h3>
+                    <div className="dados__tituloBox">
+                        {favorito && <BsHeartFill id="iconFav2" fill="#EF3651" onClick={handleFavorito} size={22} />}
+                        {!favorito && <BsHeart id="iconFav" onClick={handleFavorito} size={22} />}
+                        <h3 className="dados__titulo">{auction.name}</h3>
+                    </div>
                     <span className="dados__subtitulo">{auction.subtitle}</span>
                     <div className="dados__flexContainer">
                         <div className="flexContainer__selecionarLance">
@@ -59,21 +115,26 @@ export default function AuctionPage() {
                         <div className="flexContainer__valorAtualeTempoRestante">
                             <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>
                             <h4 className="flexContainer__valorAtualeTempoRestante--tempoRestante">Tempo Restante:</h4>
-                            <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => console.log()} />
+                            {carregado && <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => {}} />}
+                            {!carregado && <ReactLoading className='loadingComp' type={"spinningBubbles"} color="#FAFAFA" height={"15%"} width={"15%"} />}
                         </div>
                     </div>
                     <div className="dados__flexContainer">
                         <button className="dados__botaoDarLance" onClick={() => setIsBidModalVisible(true)}>Dar Lance!</button>
                         <div className="flexContainer__leiloeiro">
                             <div className="leiloeiro__box">
-                                <img className="leiloeiro__image" src={auction.leiloeiro.profilePic} alt="" />
+                                {carregado &&
+                                    <img className="leiloeiro__image" src={auction.leiloeiro.profilePic} alt="" />
+                                }
                                 <span className="leiloeiro_link">Ver Perfil</span>
                             </div>
                             <div className="leiloeiro__textos">
-                                <span>Leiloeiro(a): {auction.leiloeiro.name}</span>
+                                {carregado &&
+                                    <span>Leiloeiro(a): {auction.leiloeiro.name}</span>
+                                }
                                 <span className="leiloeiro__rating">
                                     <div className="leiloeiro__starsRatings">
-                                        <div className="fillRatings" style={{'width': percentRating}} >
+                                        <div className="fillRatings" style={{ 'width': percentRating }} >
                                             <span>★★★★★</span>
                                         </div>
                                         <div className="emptyRatings">

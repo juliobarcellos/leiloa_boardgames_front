@@ -89,7 +89,7 @@ const AuctionCarousel = () => {
                             <h2 className={styles.titulo}>{slide.name}</h2>
                             <p className={styles.subtitulo}>{slide.subtitle}</p>
                             <div className={styles.timeLeft}>
-                                <TimeLeftBox endDateTime={new Date(slide.endDateTime)} onFinish={() => console.log('finalizado')} />
+                                <TimeLeftBox endDateTime={new Date(slide.endDateTime)} onFinish={() => {}} />
                             </div>
                         </div>
                     );

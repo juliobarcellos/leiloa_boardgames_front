@@ -63,7 +63,6 @@ const AddressModal: React.FC<AddressModalProps> = ({
             console.error(e)
             setLocalRegisterError(e)
         })
-        console.log(retornoUser);
     }
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

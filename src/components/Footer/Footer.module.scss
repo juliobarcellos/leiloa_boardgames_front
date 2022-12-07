@@ -5,9 +5,9 @@
     background-color: #181820;
     height: 300px;
     &__Container{
-        padding: 50px;
+        padding: 30px;
         display: flex;
-        width: 13%;
+        width: 20%;
         color: #fafafa;
         
         flex-direction: column;
@@ -33,9 +33,12 @@
     ul{
         display: flex;
         flex-direction: column;
+        margin: 0.5rem;
+        padding: 0;
     }
     a{
         color: #fafafa;
+        margin: 0.2rem;
     }
 }
 

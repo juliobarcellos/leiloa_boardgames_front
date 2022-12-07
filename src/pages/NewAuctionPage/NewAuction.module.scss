@@ -176,14 +176,23 @@ textarea {
     border-top: solid 1px #FAFAFA;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
 
-    button{
-        cursor: pointer;
-        color: #FAFAFA;
-        background-color: #EF3651;
-        border-radius: 5px;
-        font-weight: bold;
-        padding: 0.7rem 1rem;
-        width: 20%;
-    }
+.rButton{
+    cursor: pointer;
+    color: #FAFAFA;
+    background-color: #EF3651;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    width: 20%;
+}
+.dButton{
+    cursor: not-allowed;
+    color: #FAFAFA;
+    background-color: #740011af;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    width: 20%;
 }
