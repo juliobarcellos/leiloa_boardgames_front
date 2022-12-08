@@ -3,13 +3,17 @@
         "id": 1,
         "idUsuario": 1,
         "idJogo": "1",
-        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
-        "startDateTime": "Dec 15, 2022 10:00:00",
-        "endDateTime": "Dec 31, 2022 10:00:00",
+        "productDetails": "Jogo usado comprado aqui no Brasil mesmo, o jogo está em ótimo estado, a única observação é o tabuleiro principal que fica levemente levantado na mesa, como é possível observar nas fotos, mas nada que atrapalhe a jogatina.Versão em português.",
+        "startDateTime": "Dec 01, 2022 10:00:00",
+        "endDateTime": "Dec 08, 2022 12:45:00",
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -20,12 +24,18 @@
         "valueToReceive": 0,
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1760478459733722920/products/RSU001_3D.jpg",
         "name": "Rising Sun",
-        "subtitle": "Leilão acontecendo agora!",
+        "subtitle": "Leilão finaliza hoje!",
         "gameCondition": "Usado",
         "edition": "Galápagos Jogos",
-        "price": 342,
+        "price": 440,
         "increment": 10,
-        "tags": [1, 3, 6, 7, 8],
+        "tags": [
+            1,
+            3,
+            6,
+            7,
+            8
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -58,29 +68,25 @@
                 "thumbnailHeight": 80
             }
         ],
-        "questions": [
-            {
-                "user": {
-                    "name": "Helene Moore",
-                    "profilePic": "https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png"
-                },
-                "question": "The dress is great! Very classy and comfortable. It fit perfectly! I'm 5'7 and 130 pounds. I am a 34B chest. This dress would be too long for those who are shorter but could be hemmed. I wouldn't recommend it for those big chested as I am smaller chested and it fit me perfectly. The underarms were not too wide and the dress was made well",
-                "answer": "",
-                "questionDate": "Dec 5, 2022 10:00:00"
-            }
-        ]
+        "questions": []
     },
     {
         "id": 2,
         "idUsuario": 1,
         "idJogo": "2",
-        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "productDetails": "Jogo muito bem conservado e você já leva ele com as cartas sleevadas. Essa minha cópia não tem as cartas de reposição da editora.",
         "startDateTime": "Dec 15, 2022 22:00:00",
         "endDateTime": "Dec 31, 2022 22:00:00",
         "initialValue": 100,
-        "actualBid": 3,
+        "actualBid": 24,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3,
+            23,
+            24
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -91,12 +97,17 @@
         "valueToReceive": 0,
         "image": "https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg",
         "name": "Twilight Imperium 4",
-        "subtitle": "Leilão finaliza hoje",
+        "subtitle": "Leilão acontecendo agora",
         "gameCondition": "Usado",
         "edition": "Galápagos Jogos",
-        "price": 910,
+        "price": 940,
         "increment": 10,
-        "tags": [1, 3, 7, 8],
+        "tags": [
+            1,
+            3,
+            7,
+            8
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -145,13 +156,17 @@
         "id": 3,
         "idUsuario": 1,
         "idJogo": "3",
-        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "productDetails": "Componentes em bom estado, tabuleiro com leves marcas esbranquiçadas em uma das laterais, veja as fotos.",
         "startDateTime": "Dec 31, 2022 10:00:00",
         "endDateTime": "Dec 31, 2022 10:00:00",
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -167,7 +182,13 @@
         "edition": "Galápagos Jogos",
         "price": 850,
         "increment": 10,
-        "tags": [1, 3, 8, 9, 10],
+        "tags": [
+            1,
+            3,
+            8,
+            9,
+            10
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -216,13 +237,17 @@
         "id": 4,
         "idUsuario": 1,
         "idJogo": "4",
-        "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis mi ac consectetur mollis. Aliquam faucibus venenatis ornare. Curabitur feugiat facilisis lorem. Nullam tincidunt felis sit amet tincidunt dictum. Ut at risus ullamcorper, ornare augue laoreet, congue ligula. Mauris id ornare sem, et imperdiet tortor. Suspendisse rutrum et magna non vestibulum. Aenean posuere, erat vel posuere imperdiet, urna orci pretium sem, eu eleifend risus augue ac ligula. Mauris enim ligula, tempus sit amet velit nec, aliquet pharetra neque. Nam venenatis nunc scelerisque, feugiat orci at, bibendum eros. Suspendisse venenatis purus id dui lacinia sodales. Nam ligula eros, faucibus et viverra in, ultricies vel nulla. Sed nec velit nunc. Praesent in dignissim mauris. Proin semper quam ut dolor placerat condimentum.",
+        "productDetails": "Jogo lacrado, caixa em perfeito estado. Acompanha expansão Armada",
         "startDateTime": "Dec 30, 2022 10:00:00",
         "endDateTime": "Dec 30, 2022 10:00:00",
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -238,7 +263,11 @@
         "edition": "Galápagos Jogos",
         "price": 310,
         "increment": 10,
-        "tags": [1, 3, 5],
+        "tags": [
+            1,
+            3,
+            5
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -277,8 +306,17 @@
                     "name": "Helene Moore",
                     "profilePic": "https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png"
                 },
-                "question": "The dress is great! Very classy and comfortable. It fit perfectly! I'm 5'7 and 130 pounds. I am a 34B chest. This dress would be too long for those who are shorter but could be hemmed. I wouldn't recommend it for those big chested as I am smaller chested and it fit me perfectly. The underarms were not too wide and the dress was made well",
-                "answer": "",
+                "question": "Olá, tudo bem? Pode postar mais fotos?",
+                "answer": "Olá, fotos postadas.",
+                "questionDate": "Dec 5, 2022 10:00:00"
+            },
+            {
+                "user": {
+                    "name": "Julio Cesar da Silva Barcellos",
+                    "profilePic": "https://avatars.githubusercontent.com/u/46910743?v=4"
+                },
+                "question": "Lacrado sem avarias e mofo?",
+                "answer": "Olá, lacrado sem avarias.",
                 "questionDate": "Dec 5, 2022 10:00:00"
             }
         ]
@@ -291,9 +329,14 @@
         "startDateTime": "Dec 22, 2022 10:00:00",
         "endDateTime": "Dec 22, 2022 10:00:00",
         "initialValue": 100,
-        "actualBid": 3,
+        "actualBid": 25,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3,
+            25
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -307,9 +350,14 @@
         "subtitle": "Raridade!!",
         "gameCondition": "Usado",
         "edition": "Galápagos Jogos",
-        "price": 215,
+        "price": 220,
         "increment": 5,
-        "tags": [3, 4, 5, 6],
+        "tags": [
+            3,
+            4,
+            5,
+            6
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -364,7 +412,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -380,7 +432,12 @@
         "edition": "Galápagos Jogos",
         "price": 367,
         "increment": 10,
-        "tags": [1, 3, 5, 6],
+        "tags": [
+            1,
+            3,
+            5,
+            6
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -424,7 +481,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -440,7 +501,12 @@
         "edition": "Galápagos Jogos",
         "price": 205,
         "increment": 5,
-        "tags": [1, 3, 6, 9],
+        "tags": [
+            1,
+            3,
+            6,
+            9
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -484,7 +550,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -500,7 +570,13 @@
         "edition": "Galápagos Jogos",
         "price": 590,
         "increment": 10,
-        "tags": [1, 3, 6, 9, 10],
+        "tags": [
+            1,
+            3,
+            6,
+            9,
+            10
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -544,7 +620,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -560,7 +640,14 @@
         "edition": "Galápagos Jogos",
         "price": 480,
         "increment": 10,
-        "tags": [1, 3, 6, 9, 10, 11],
+        "tags": [
+            1,
+            3,
+            6,
+            9,
+            10,
+            11
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -604,7 +691,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -620,7 +711,13 @@
         "edition": "Galápagos Jogos",
         "price": 695,
         "increment": 5,
-        "tags": [1, 3, 6, 9, 10],
+        "tags": [
+            1,
+            3,
+            6,
+            9,
+            10
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -664,7 +761,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -680,7 +781,13 @@
         "edition": "Galápagos Jogos",
         "price": 557,
         "increment": 10,
-        "tags": [1, 3, 6, 9, 10],
+        "tags": [
+            1,
+            3,
+            6,
+            9,
+            10
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -724,7 +831,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -740,7 +851,12 @@
         "edition": "Galápagos Jogos",
         "price": 580,
         "increment": 10,
-        "tags": [1, 3, 6, 10],
+        "tags": [
+            1,
+            3,
+            6,
+            10
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -784,7 +900,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -800,7 +920,12 @@
         "edition": "Galápagos Jogos",
         "price": 489,
         "increment": 10,
-        "tags": [1, 3, 6, 7],
+        "tags": [
+            1,
+            3,
+            6,
+            7
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -844,7 +969,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -860,7 +989,12 @@
         "edition": "Galápagos Jogos",
         "price": 1020,
         "increment": 10,
-        "tags": [1, 3, 6, 7],
+        "tags": [
+            1,
+            3,
+            6,
+            7
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",
@@ -904,7 +1038,11 @@
         "initialValue": 100,
         "actualBid": 3,
         "winningBid": null,
-        "bids": [1, 2, 3],
+        "bids": [
+            1,
+            2,
+            3
+        ],
         "height": 30,
         "width": 30,
         "lenght": 50,
@@ -918,9 +1056,14 @@
         "subtitle": "Raridade!!",
         "gameCondition": "Usado",
         "edition": "Galápagos Jogos",
-        "price": 320,
+        "price": 420,
         "increment": 10,
-        "tags": [1, 3, 5, 6],
+        "tags": [
+            1,
+            3,
+            5,
+            6
+        ],
         "leiloeiro": {
             "name": "Matilda Brown",
             "profilePic": "https://static-cse.canva.com/blob/892615/1600w-EW4cggXkgbc.jpg",

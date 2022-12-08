@@ -30,7 +30,7 @@ export default function AuctionPage() {
     let percentRating = '100%';
 
     useEffect(() => {
-        async function teste() {
+        async function carregaLeilao() {
             if (id) {
                 const response = await auctionService.getByID(id)
                 let jsonLeilao = JSON.stringify(response.data, null, '  ')
@@ -38,12 +38,11 @@ export default function AuctionPage() {
                 setCarregado(true)
             }
         }
-        teste();
+        carregaLeilao();
     }, []);
 
     useEffect(() => {
         if (auction !== undefined && auction.leiloeiro !== undefined) {
-            let selectComponente = document.querySelector('.selecionarLance__select');
             setBidValue(auction.price + auction.increment)
             let lista: number[] = []
             for (let i = 0; i <= 4; i++) {
@@ -163,7 +162,7 @@ export default function AuctionPage() {
                         <div className="flexContainer__valorAtualeTempoRestante">
                             {finalizado && <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance vencedor R$ {auction.price},00</h4>}
                             {!finalizado && <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>}
-                            <span>{context.user.id === 1 && auction.price === 450 ||
+                            <span style={{"fontSize": "1.2rem","fontWeight": "bold", "color": "#E93651"}}>{context.user.id === 1 && auction.price === 450 ||
                                 context.user.id === 1 && auction.price === 470 ||
                                 context.user.id === 2 && auction.price === 460 ||
                                 context.user.id === 2 && auction.price === 480 ? "Seu Lance!" : ""}

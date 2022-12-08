@@ -76,6 +76,9 @@ export interface AuctionType {
   subtitle: string,
   price: number,
   increment: number,
+  paymentMethod?: string,
+  cardNumber?: string,
+  parcelas?: string,
   tags: number[],
   leiloeiro: LeiloeiroType,
   fichaTecnica: string,
@@ -109,6 +112,9 @@ export const initialAuction = {
   subtitle: 'string',
   price: 0,
   increment: 0,
+  paymentMethod: "string",
+  cardNumber: "string",
+  parcelas: "string",
   tags: [],
   leiloeiro: {
     name: 'string',
@@ -154,4 +160,13 @@ export interface BidType {
   idLeilao: number,
   value: number,
   dateTime: string
+}
+
+export interface NotificationType {
+    image: string,
+    name: string,
+    text: string,
+    notificationDateTime: string,
+    idJogo: number,
+    id?: number
 }
