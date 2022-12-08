@@ -6,9 +6,11 @@ import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import BidModal from "../../components/Modals/Bid/BidModal";
 import auctionService from "../../services/auctionService";
-import { AuctionType, ImageCarouselType } from "../../types";
+import { AuctionType, BidType, ImageCarouselType } from "../../types";
 import { userContext } from "../../context/user";
 import ReactLoading from 'react-loading';
+import LoadingModal from "../../components/Modals/LoadingModal";
+import bidService from "../../services/bidService";
 
 export default function AuctionPage() {
     const { id } = useParams();
@@ -16,6 +18,7 @@ export default function AuctionPage() {
     const [lancesDisponiveis, setLancesDisponiveis] = useState<number[]>([]);
     const [isBidModalVisible, setIsBidModalVisible] = useState(false);
     const [isShipmentModalVisible, setIsShipmentModalVisible] = useState(false);
+    const [isLoadingModalVisible, setIsLoadingModalVisible] = useState(false);
     const [bidValue, setBidValue] = useState(0);
     const [imagens, setImagens] = useState<ImageCarouselType[]>([]);
     const [carregado, setCarregado] = useState(false);
@@ -37,11 +40,17 @@ export default function AuctionPage() {
     }, []);
 
     useEffect(() => {
+        console.log("useEffect auction")
+        console.log(auction)
+        console.log(`inicio lances ${lancesDisponiveis}`)
         if (auction !== undefined && auction.leiloeiro !== undefined) {
+            let selectComponente = document.querySelector('.selecionarLance__select');
             setBidValue(auction.price + auction.increment)
-            for (let i = 1; i <= 5; i++) {
-                lancesDisponiveis[i] = auction.price + (auction.increment * i);
+            let lista: number[] = []
+            for (let i = 0; i <= 4; i++) {
+                lista[i] = auction.price + (auction.increment * (i+1));
             }
+            setLancesDisponiveis(lista)
             let pics: Array<ImageCarouselType> = [];
             auction.images?.map(imagem => {
                 let novaImagem = {
@@ -58,12 +67,13 @@ export default function AuctionPage() {
             userRating = auction.leiloeiro.rating;
             percentRating = ((auction.leiloeiro.rating / 5.0) * 100) + '%;';
             document.querySelector('.fillRatings')?.setAttribute('style', `${'width: ' + percentRating}`)
-            // setCarregado(true)
             if (context.logado) {
                 if (context.user.favoritos?.find(item => item === Number(auction.idJogo))) {
                     setFavorito(true);
                 }
             }
+            console.log(`fim lances ${lancesDisponiveis}`)
+
         }
     }, [auction])
 
@@ -74,19 +84,48 @@ export default function AuctionPage() {
         } else {
             alert("Para selecionar um jogo como favorito é preciso estar logado, efetue o login.")
         }
+    }
 
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setIsBidModalVisible(false);
+        let lance: BidType = {
+            idUser: context.user.id!,
+            idLeilao: auction.id!,
+            value: bidValue,
+            dateTime: new Date().toLocaleString('pt-BR')
+            //dateTime: new Date().toString()
+        }
+        bidService.create(lance).then((response) => {
+            lance = response.data;
+            auction.bids?.push(lance.id!);
+            auction.actualBid = lance.id;
+            auction.price = lance.value;
+            console.log(auction)
+            console.log(lance)
+            console.log(`create ${bidValue}`)
+            setBidValue(auction.price + auction.increment)
+            let lista: number[] = []
+            for (let i = 0; i <= 4; i++) {
+                lista[i] = auction.price + (auction.increment * (i+1));
+            }
+            setLancesDisponiveis(lista)
+        })
+    }
+
+    function handleDarLance() {
+        if (context.logado) {
+            setIsBidModalVisible(true);
+        } else {
+            setIsLoadingModalVisible(true);
+        }
     }
 
     if (!auction) {
         return (
             <div>404 Not Found</div>
         )
-    } 
-    // else if (!carregado){
-        // return (
-        //     <ReactLoading className='loadingComp' type={"spinningBubbles"} color="#FAFAFA" height={"15%"} width={"15%"} />
-        // )
-    // }
+    }
     return (
         <>
             <div className='dadosLeilao'>
@@ -103,24 +142,26 @@ export default function AuctionPage() {
                     <div className="dados__flexContainer">
                         <div className="flexContainer__selecionarLance">
                             <h4 className="selecionarLance__title">Selecione o seu lance</h4>
-                            <select className="selecionarLance__select" onChange={e => setBidValue(+e.target.value)} >
-                                {lancesDisponiveis.map((lance, index) => {
-                                    return (
-                                        <option key={index} value={lance}>R$ {lance},00</option>
-                                    )
-                                })}
-                            </select>
+                            {carregado &&
+                                <select className="selecionarLance__select" onChange={e => setBidValue(+e.target.value)} >
+                                    {lancesDisponiveis.map((lance, index) => {
+                                        return (
+                                            <option key={index} id={String(index)} value={lancesDisponiveis[index]}>R$ {lancesDisponiveis[index]},00</option>
+                                        )
+                                    })}
+                                </select>
+                            }
                             <button className="selecionarLance__button">Ver lances anteriores</button>
                         </div>
                         <div className="flexContainer__valorAtualeTempoRestante">
                             <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>
                             <h4 className="flexContainer__valorAtualeTempoRestante--tempoRestante">Tempo Restante:</h4>
-                            {carregado && <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => {}} />}
+                            {carregado && <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => { }} />}
                             {!carregado && <ReactLoading className='loadingComp' type={"spinningBubbles"} color="#FAFAFA" height={"15%"} width={"15%"} />}
                         </div>
                     </div>
                     <div className="dados__flexContainer">
-                        <button className="dados__botaoDarLance" onClick={() => setIsBidModalVisible(true)}>Dar Lance!</button>
+                        <button className="dados__botaoDarLance" onClick={handleDarLance}>Dar Lance!</button>
                         <div className="flexContainer__leiloeiro">
                             <div className="leiloeiro__box">
                                 {carregado &&
@@ -186,7 +227,8 @@ export default function AuctionPage() {
                     )
                 })}
             </div>
-            {isBidModalVisible && <BidModal value={bidValue} isModalVisible={isBidModalVisible} setIsModalVisible={setIsBidModalVisible} />}
+            {isLoadingModalVisible && <LoadingModal title="Atenção!" message="Você não está logado, para dar um lance é preciso fazer login" isModalVisible={isLoadingModalVisible} customFunction={() => setIsLoadingModalVisible(false)} customFunctionTitle={"retornar para a página anterior"} />}
+            {isBidModalVisible && <BidModal value={bidValue} isModalVisible={isBidModalVisible} setIsModalVisible={setIsBidModalVisible} handleSubmit={handleSubmit} />}
         </>
     )
 }

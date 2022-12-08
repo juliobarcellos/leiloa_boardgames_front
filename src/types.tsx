@@ -147,3 +147,11 @@ export interface ImageCarouselType {
   thumbnailWidth: number,
   thumbnailHeight: number
 }
+
+export interface BidType {
+  id?: number,
+  idUser: number,
+  idLeilao: number,
+  value: number,
+  dateTime: string
+}

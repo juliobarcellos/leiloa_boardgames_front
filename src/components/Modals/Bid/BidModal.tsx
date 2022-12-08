@@ -5,12 +5,14 @@ interface BidModalProps {
     value: number;
     isModalVisible: boolean;
     setIsModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
+    handleSubmit: (e:React.FormEvent<HTMLFormElement>) => void;
 }
 
 const BidModal: React.FC<BidModalProps> = ({
     value,
     isModalVisible,
     setIsModalVisible,
+    handleSubmit
 }) => {
 
     const onClose = () => {
@@ -25,7 +27,7 @@ const BidModal: React.FC<BidModalProps> = ({
             message="Sempre preste atenção às condições do jogo e o valor de frete estimado, caso possua dúvidas utilize a área de perguntas para se comunicar com o vendedor. Após seu lance ser realizado ele não poderá ser cancelado."
         >
             <>
-                <form className={styles.bidModal} >
+                <form className={styles.bidModal} onSubmit={(e) => handleSubmit(e)} >
                     <div className={styles.bidModal__checkTerms}>
                         <input type='checkbox' id='termsAgreement' className={styles['bidModal__checkTerms--checkbox']} required />
                         <label htmlFor='termsAgreement'>Estou de acordo com os <strong>termos e condições de uso</strong></label>
