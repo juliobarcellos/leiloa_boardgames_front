@@ -7,6 +7,7 @@ import { HiOutlineIdentification } from 'react-icons/hi';
 import styles from '../../Modals.module.scss';
 import DoubleColumnModalRWD from '../../DoubleColumnModalRWD';
 import { userContext } from '../../../../context/user';
+import InputFoto from '../../InputFoto';
 
 interface PersonalDataModalProps {
     onClose: () => void;
@@ -46,6 +47,7 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
     const [birthDate, setBirthDate] = useState('');
     const [expeditionDate, setExpeditionDate] = useState('');
     const [phone, setPhone] = useState('');
+    const [foto, setFoto] = useState('');
     const [localRegisterError, setLocalRegisterError] = useState<string | undefined>();
 
     const onRegisterTrigger = (e: React.FormEvent<HTMLFormElement> | React.KeyboardEvent<HTMLInputElement>) => {
@@ -217,6 +219,17 @@ const PersonalDataModal: React.FC<PersonalDataModalProps> = ({
                     type="number"
                     placeholder='Digite o número do celular'
                     icon={<FiPhone size={24} />}
+                    required
+                />
+                <label htmlFor='profilePic' className={styles.FormLabel}>Avatar</label>
+                <input type="file" id='inputPhotos' className={styles.inputPhotos} name='inputPhotos' accept="image/png, image/jpeg, image/jpg" multiple />
+                <InputFoto
+                    id='profilePic'
+                    onKeyDown={onKeyDown}
+                    value={foto}
+                    onChange={e => setFoto(e.target.value)}
+                    type="text"
+                    placeholder='Procure uma foto ou digite a URL'
                     required
                 />
                 <button className={styles.Button} id="submitButton" type='submit'>Próximo</button>

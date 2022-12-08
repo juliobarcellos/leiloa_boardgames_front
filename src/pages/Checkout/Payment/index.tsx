@@ -1,16 +1,21 @@
-import { useState } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
 import styles from './Payment.module.scss';
 import { FcSimCardChip } from 'react-icons/fc'
 import { FaCcMastercard, FaCcVisa } from 'react-icons/fa'
 import NewCardModal from '../../../components/Modals/NewCard/NewCardModal';
-import auctions from '../../../data/auctions.json';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import auctionService from '../../../services/auctionService';
+import { AuctionType, UserType } from '../../../types';
+import { userContext } from '../../../context/user';
 
 export default function Payment() {
     const [selected, setSelected] = useState<HTMLDivElement>();
     const [isModalVisible, setIsModalVisible ] = useState(false);
+    const [auction, setAuction] = useState<AuctionType>();
+    const [user, setUser] = useState<UserType>();
     const { id } = useParams();
-    const auction = auctions.find(item => item.id === Number(id));
+    const contexto = useContext(userContext);
+    const navigate = useNavigate();
 
     function handleCardSelected(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
         if (e.currentTarget === selected) {
@@ -22,6 +27,23 @@ export default function Payment() {
             e.currentTarget.classList.add(`${styles.active}`)
         }
     }
+
+    function handleNext(){
+        auctionService.atualizarPagamento(auction?.id!, "Cartao", "**** **** **** 3947", "6x R$ 80,84")
+        navigate(`/leilao/${id}/details`)
+    }
+
+    useLayoutEffect(() => {
+        async function carregaLeilao() {
+            if (id) {
+                const response = await auctionService.getByID(id)
+                let jsonLeilao = JSON.stringify(response.data, null, '  ')
+                setAuction(JSON.parse(jsonLeilao));
+            }
+        }
+        setUser(contexto.user);
+        carregaLeilao();
+    },[])
 
     const toggleModal = () => {
         setIsModalVisible(!isModalVisible)
@@ -126,11 +148,11 @@ export default function Payment() {
                     <div className={styles.orderDetails__group}>
                         <span className={styles.orderDetails__value}>R$ {auction?.price}</span>
                         <span className={styles.orderDetails__value}>R$ {auction?.shipmentValue}</span>
-                        <span className={styles.orderDetails__value}>R$ {auction?.price && auction?.price + auction?.shipmentValue}</span>
+                        <span className={styles.orderDetails__value}>R$ {auction?.price && auction?.price + auction?.shipmentValue!}</span>
                     </div>
                 </div>
             </section>
-            <button className={styles.payment__button}>Finalizar Compra</button>
+            <button className={styles.payment__button} onClick={handleNext}>Finalizar Compra</button>
             <NewCardModal isModalVisible={isModalVisible} setIsModalVisible={setIsModalVisible} onClose={toggleModal} />
         </main>
     )

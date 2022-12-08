@@ -9,7 +9,7 @@ interface HomeProps {
     setSearch: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function Home({ search, setSearch }: HomeProps) {
+export default function Home({ search }: HomeProps) {
     const [category, setCategory] = useState<number | null>(null);
     const [orderOption, setOrderOption] = useState<string>('');
     const myRef = useRef<null | HTMLDivElement>(null);

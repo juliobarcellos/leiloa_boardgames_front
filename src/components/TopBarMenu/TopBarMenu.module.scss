@@ -16,6 +16,7 @@
     justify-content: center;
     margin: 0.5rem 1.2rem;
     text-decoration: none;
+    position: relative;
     &:hover {
         color: #EF3651;
     }
@@ -23,6 +24,13 @@
     span{
         margin-top: 0.3rem;
         text-align: center;
+    }
+
+    &__dot{
+        color: #EF3651;
+        position: absolute;
+        top: -0.9rem;
+        right: 1rem;
     }
 } 
 

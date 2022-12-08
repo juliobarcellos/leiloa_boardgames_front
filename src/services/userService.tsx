@@ -4,7 +4,11 @@ import http from "../utils/http";
 class UserService{
     create(usuario:UserType){
         let jsonUsuario = JSON.stringify(usuario, null, '  ')
-        return http.post("/usuarios", JSON.parse(jsonUsuario))
+        return http.post("/users", JSON.parse(jsonUsuario))
+    }
+
+    getByEmail(email: string){
+        return http.get(`/users?email=${email}`)
     }
 }
 

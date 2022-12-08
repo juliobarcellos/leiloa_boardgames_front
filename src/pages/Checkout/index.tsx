@@ -1,18 +1,47 @@
-import { useState } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
 import styles from './Checkout.module.scss';
-import auctions from '../../data/auctions.json';
-import users from '../../data/users.json';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import auctionService from '../../services/auctionService';
+import { AddressType, AuctionType, UserType } from '../../types';
+import { userContext } from '../../context/user';
 
-export default function Checkout() {
+interface CheckoutProps {
+    usuario: UserType
+}
+
+export default function Checkout({usuario}: CheckoutProps) {
     const { id } = useParams();
-    const auction = auctions.find(item => item.id === Number(id));
-    const user = users.find(usuario => usuario.id === 1);
-    const [ userAddress, setUserAddress ] = useState(users.find(usuario => usuario.id === 1)?.endereco.find(endereco => endereco.preferencial === true))
+    const [auction, setAuction] = useState<AuctionType>();
+    const [user, setUser] = useState<UserType>(usuario);
+    const contexto = useContext(userContext);
+    const [ userAddress, setUserAddress ] = useState<AddressType>()
     const [frete, setFrete] = useState(0);
-
-    const correios = Math.floor((Math.random()*50)+8);
+    const correios = 27;
     const vendedor = 0;
+    const navigate = useNavigate();
+
+    useLayoutEffect(() => {
+        async function carregaLeilao() {
+            if (id) {
+                const response = await auctionService.getByID(id)
+                let jsonLeilao = JSON.stringify(response.data, null, '  ')
+                setAuction(JSON.parse(jsonLeilao));
+            }
+        }
+        setUser(contexto.user);
+        if(user && user.enderecos){
+            console.log(user.enderecos)
+            setUserAddress(user.enderecos[0])
+        }
+        carregaLeilao();
+    },[])
+
+    function handleNext() {
+        auctionService.atualizarFrete(auction?.id!, frete, "correios").then(
+            
+        )
+        navigate(`/leilao/${id}/payment`)
+    }
 
     return (
         <main className={styles.checkout}>
@@ -23,7 +52,7 @@ export default function Checkout() {
                         <div className={styles.address__group}>
                             <span className={styles['address__group--address']}>
                                 <span className={styles.address__title}>{userAddress?.identificacao}</span>
-                                <span>{`${user?.nome} - (${user?.telefone.substring(0,1)}) ${user?.telefone.substring(2)}`}</span>
+                                <span>{`${user?.nome} - (${user?.telefone.substring(0,2)}) ${user?.telefone.substring(2)}`}</span>
                                 <span>{`${userAddress?.logradouro}, ${userAddress?.numero}`}</span>
                                 <span>{userAddress?.complemento}</span>
                                 <span>{`${userAddress?.bairro}, ${userAddress?.cidade} - ${userAddress?.estado}`}</span>
@@ -76,7 +105,7 @@ export default function Checkout() {
                     </div>
                 </div>
             </section>
-            <button className={styles.checkout__button}>Ir para Pagamento</button>
+            <button className={styles.checkout__button} onClick={handleNext}>Ir para Pagamento</button>
         </main>
     )
 }

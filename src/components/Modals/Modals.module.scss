@@ -49,6 +49,20 @@
         width: 100%;
         background-color: #EF3651;
     }
+
+    &__link{
+        font-size: 1.2rem;
+        color: #EF3651;
+        :visited {
+            color: #9098B1;
+        }
+    }
+    &__function{
+        font-size: 1.2rem;
+        color: #EF3651;
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 
 .DoubleColumnModalContainer {
@@ -174,6 +188,15 @@
         width: 32%;
     }
 
+    .InputFotoContainer {
+        width: 32%;
+        margin-left: 8.3rem;
+    }
+
+    .inputPhotos{
+        margin-top: 0.8rem;
+    }
+
     ::-webkit-calendar-picker-indicator {
         filter: invert(1);
     }
@@ -185,7 +208,7 @@
 
 }
 
-.InputContainer {
+.InputContainer, .InputFotoContainer {
     color: #FAFAFA;
     margin: 0 auto;
     display: flex;
@@ -213,6 +236,7 @@
             opacity: 1;
         }
     }
+
 }
 
 .FormLabel{

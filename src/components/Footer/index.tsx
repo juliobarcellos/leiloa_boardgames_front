@@ -1,4 +1,4 @@
-import styles from './footer.module.scss';
+import styles from './Footer.module.scss';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 export default function Footer() {
@@ -12,33 +12,22 @@ export default function Footer() {
             <div className={styles.footer__Container}>
                 <span>Sobre nós</span>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed felis erat. Ut et congue augue. Sed ut enim ac felis scelerisque malesuada. Etiam sed sem a libero porta finibus. 
+                    Somos uma empresa que visa fornecer um serviço de compra e venda de jogos de tabuleiro por meio de leilões online. Nosso site conta com toda a segurança necessária para sua transação, e damos todo o suporte para que as duas partes possam acertar os detalhes.
                 </p>
-            </div>
-            <div className={styles.footer__Container}>
-                <span>MAPA DO SITE</span>
-
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>link2</a></li>
-                    <li><a>link3</a></li>
-                    <li><a>link4</a></li>
-                    
-                </ul>
             </div>
             <div className={styles.footer__Container}>
                 <span>Politicas</span>
                 <ul>
-                    <li>Termos de Uso</li>
-                    <li>Politica de Privacidade</li>
-                    <li>Devolução e Reembolso</li>
+                    <a href='#'>Termos de Uso</a>
+                    <a href='#'>Politica de Privacidade</a>
+                    <a href='#'>Devolução e Reembolso</a>
                 </ul>
 
             </div>
             <div className={styles.footer__Container}>
                 <span>FALE CONOSCO</span>
 
-                <p>Telefone: 000-000-000</p>
+                <p>Telefone: (11)1234-5678</p>
                 <p>E-mail: contato@leiloabordgames.com.br</p>
             </div>
             <span className={styles.footer__CopyRights}>Copyright © 2022 Leiloa BoardGames. All rights reserved.</span>

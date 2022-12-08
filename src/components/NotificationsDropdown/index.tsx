@@ -1,29 +1,40 @@
 import { MouseEventHandler, useEffect, useState } from 'react';
 import styles from './NotificationsDropdown.module.scss';
-import notificationsData from '../../data/notifications.json'
 import { useNavigate } from 'react-router-dom';
-
-type notificationType = typeof notificationsData[0];
+import notificationService from '../../services/notificationService';
+import { NotificationType } from '../../types';
 
 interface NotificationsDropdownProps {
     isOpen: boolean;
     onBackdropClick: () => void;
 }
 
-export default function NotificationsDropdown({ onBackdropClick }: NotificationsDropdownProps) {
-    const [notifications, setNotifications] = useState<notificationType[]>([]);
+export default function NotificationsDropdown({ isOpen, onBackdropClick }: NotificationsDropdownProps) {
+    const [notifications, setNotifications] = useState<NotificationType[]>([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        setNotifications(notificationsData);
+        notificationService.getAll().then((response) =>{
+            setNotifications(response.data);
+        })
     }, []);
 
+    useEffect(() => {
+        notificationService.getAll().then((response) =>{
+            setNotifications(response.data);
+        })
+    }, [isOpen]);
+
     function convertDate(date: string) {
-        return new Date(date).toDateString();
+        return new Date(date).toLocaleString('pt-BR');
     };
 
-    function handleClick() {
-        navigate('/leilao/1/checkout');
+    function handleClick(id: number, text: string) {
+        if (text === "Você venceu o leilão! Prossiga para o pagamento."){
+        navigate(`/leilao/${id}/checkout`)}
+        else {
+            navigate(`/leilao/${id}`)
+        }
         onBackdropClick();
     }
 
@@ -38,7 +49,7 @@ export default function NotificationsDropdown({ onBackdropClick }: Notifications
             <ol className={styles.Notifications__list} onClick={stopPropagation}>
                 {notifications.length > 0 ?
                     notifications.map(notification => (
-                        <li key={notification.id} className={styles['Notifications__list--notification']} onClick={handleClick}>
+                        <li key={notification.id} className={styles['Notifications__list--notification']} onClick={() => handleClick(notification.id!, notification.text)}>
                             <img src={notification.image} className={styles.notification__img} />
                             <div className={styles.notification__data}>
                                 <span className={styles.notification__game}>{notification.name}</span>

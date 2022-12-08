@@ -29,7 +29,8 @@ const LoginModalWrapper = (props: StateProps) => {
 
   const onLoginRequested: AuthFunction = async (loginData) => {
     try {
-      await loginUser(loginData)
+      const usuario = await loginUser(loginData);
+      context.user = usuario;
       context.logado = true;
       props.states.setIsLoginModalVisible(false)
     } catch (e) {

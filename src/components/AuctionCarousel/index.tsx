@@ -8,13 +8,13 @@ const SliderData = [
     {
         image: 'https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v1760478459733722920/products/RSU001_3D.jpg',
         name: 'Rising Sun',
-        subtitle: 'Leilão acontecendo agora!',
-        endDateTime: 'Dec 31, 2022 10:00:00'
+        subtitle: 'Leilão finaliza hoje!',
+        endDateTime: 'Dec 08, 2022 12:45:00'
     },
     {
         image: 'https://www.mundogalapagos.com.br/ccstore/v1/images/?source=/file/v8328468370973062307/products/TWI001_3D.jpg',
         name: 'Twilight Imperium 4',
-        subtitle: 'Leilão finaliza hoje',
+        subtitle: 'Leilão acontecendo agora',
         endDateTime: 'Dec 31, 2022 22:00:00'
     },
     {
@@ -89,7 +89,7 @@ const AuctionCarousel = () => {
                             <h2 className={styles.titulo}>{slide.name}</h2>
                             <p className={styles.subtitulo}>{slide.subtitle}</p>
                             <div className={styles.timeLeft}>
-                                <TimeLeftBox endDateTime={new Date(slide.endDateTime)} onFinish={() => console.log('finalizado')} />
+                                <TimeLeftBox endDateTime={new Date(slide.endDateTime)} onFinish={() => {}} />
                             </div>
                         </div>
                     );

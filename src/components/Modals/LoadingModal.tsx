@@ -1,11 +1,15 @@
 import { MouseEventHandler } from "react";
 import ReactDOM from "react-dom";
-import styles from 'Modals.module.scss';
+import { Link } from "react-router-dom";
+import styles from './Modals.module.scss';
 
 interface LoadingModalProps {
     title: string,
     message: string,
     link?: string,
+    linkTitle?: string,
+    customFunctionTitle?: string,
+    customFunction?: () => void,
     isModalVisible: boolean
 }
 
@@ -14,7 +18,7 @@ const stopPropagation: MouseEventHandler<HTMLDivElement> = e => {
     e.stopPropagation();
 };
 
-export default function LoadingModal({ title, message, link, isModalVisible }: LoadingModalProps) {
+export default function LoadingModal({ title, message, link, linkTitle, customFunctionTitle, customFunction, isModalVisible }: LoadingModalProps) {
 
     if (!isModalVisible) {
         return null
@@ -26,7 +30,8 @@ export default function LoadingModal({ title, message, link, isModalVisible }: L
                 <div className={styles.DesktopModalContainer}>
                     <h3 className={styles.Header}>{title}</h3>
                     <p className={styles.Message}>{message}</p>
-                    {link && <p>link</p>}
+                    {link && <Link  className={styles.DesktopModalContainer__link} to={link}>{linkTitle}</Link>}
+                    {customFunction && <span onClick={customFunction} className={styles.DesktopModalContainer__function}>{customFunctionTitle}</span>}
                 </div>
 
             </div>
