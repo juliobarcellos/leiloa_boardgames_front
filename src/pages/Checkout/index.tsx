@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Checkout.module.scss';
 import auctions from '../../data/auctions.json';
 import users from '../../data/users.json';
@@ -13,6 +13,10 @@ export default function Checkout() {
 
     const correios = Math.floor((Math.random()*50)+8);
     const vendedor = 0;
+
+    useEffect(() => {
+        
+    },[])
 
     return (
         <main className={styles.checkout}>

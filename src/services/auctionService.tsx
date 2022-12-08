@@ -1,4 +1,4 @@
-import { AuctionType } from "../types";
+import { AuctionType, BidType } from "../types";
 import http from "../utils/http";
 
 class AuctionService{
@@ -13,6 +13,10 @@ class AuctionService{
 
     getAll(){
         return http.get('/auctions')
+    }
+
+    atualizarLance(id: number, lances: number[], lanceAtual: number, preco: number){
+        return http.patch(`/auctions/${id}`, {"bids": lances, "actualBid": lanceAtual, "price": preco})
     }
 }
 

@@ -2,7 +2,7 @@ import TimeLeftBox from "../../components/TimeLeftBox";
 import ImageGallery from 'react-image-gallery';
 import { BsTruck, BsHeart, BsHeartFill } from 'react-icons/bs';
 import './AuctionPage.scss';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import BidModal from "../../components/Modals/Bid/BidModal";
 import auctionService from "../../services/auctionService";
@@ -23,6 +23,8 @@ export default function AuctionPage() {
     const [imagens, setImagens] = useState<ImageCarouselType[]>([]);
     const [carregado, setCarregado] = useState(false);
     const [favorito, setFavorito] = useState(false);
+    const [finalizado, setFinalizado] = useState(false);
+    const navigate = useNavigate();
     const context = useContext(userContext);
     let userRating = 5;
     let percentRating = '100%';
@@ -40,15 +42,12 @@ export default function AuctionPage() {
     }, []);
 
     useEffect(() => {
-        console.log("useEffect auction")
-        console.log(auction)
-        console.log(`inicio lances ${lancesDisponiveis}`)
         if (auction !== undefined && auction.leiloeiro !== undefined) {
             let selectComponente = document.querySelector('.selecionarLance__select');
             setBidValue(auction.price + auction.increment)
             let lista: number[] = []
             for (let i = 0; i <= 4; i++) {
-                lista[i] = auction.price + (auction.increment * (i+1));
+                lista[i] = auction.price + (auction.increment * (i + 1));
             }
             setLancesDisponiveis(lista)
             let pics: Array<ImageCarouselType> = [];
@@ -72,8 +71,6 @@ export default function AuctionPage() {
                     setFavorito(true);
                 }
             }
-            console.log(`fim lances ${lancesDisponiveis}`)
-
         }
     }, [auction])
 
@@ -101,16 +98,26 @@ export default function AuctionPage() {
             auction.bids?.push(lance.id!);
             auction.actualBid = lance.id;
             auction.price = lance.value;
-            console.log(auction)
-            console.log(lance)
-            console.log(`create ${bidValue}`)
             setBidValue(auction.price + auction.increment)
             let lista: number[] = []
             for (let i = 0; i <= 4; i++) {
-                lista[i] = auction.price + (auction.increment * (i+1));
+                lista[i] = auction.price + (auction.increment * (i + 1));
             }
             setLancesDisponiveis(lista)
+            auctionService.atualizarLance(auction.id!, auction.bids!, auction.actualBid!, auction.price).then(
+                (response) => {
+
+                }
+            )
         })
+    }
+
+    function handleOnFinish() {
+        setFinalizado(true);
+    }
+
+    function handleFinalizar() {
+        navigate(`checkout`)
     }
 
     function handleDarLance() {
@@ -143,7 +150,7 @@ export default function AuctionPage() {
                         <div className="flexContainer__selecionarLance">
                             <h4 className="selecionarLance__title">Selecione o seu lance</h4>
                             {carregado &&
-                                <select className="selecionarLance__select" onChange={e => setBidValue(+e.target.value)} >
+                                <select className="selecionarLance__select" onChange={e => setBidValue(+e.target.value)} disabled={finalizado} >
                                     {lancesDisponiveis.map((lance, index) => {
                                         return (
                                             <option key={index} id={String(index)} value={lancesDisponiveis[index]}>R$ {lancesDisponiveis[index]},00</option>
@@ -154,14 +161,21 @@ export default function AuctionPage() {
                             <button className="selecionarLance__button">Ver lances anteriores</button>
                         </div>
                         <div className="flexContainer__valorAtualeTempoRestante">
-                            <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>
+                            {finalizado && <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance vencedor R$ {auction.price},00</h4>}
+                            {!finalizado && <h4 className="flexContainer__valorAtualeTempoRestante--lanceAtual">Lance atual R$ {auction.price},00</h4>}
+                            <span>{context.user.id === 1 && auction.price === 450 ||
+                                context.user.id === 1 && auction.price === 470 ||
+                                context.user.id === 2 && auction.price === 460 ||
+                                context.user.id === 2 && auction.price === 480 ? "Seu Lance!" : ""}
+                            </span>
                             <h4 className="flexContainer__valorAtualeTempoRestante--tempoRestante">Tempo Restante:</h4>
-                            {carregado && <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={() => { }} />}
+                            {carregado && <TimeLeftBox endDateTime={new Date(auction.endDateTime)} onFinish={handleOnFinish} />}
                             {!carregado && <ReactLoading className='loadingComp' type={"spinningBubbles"} color="#FAFAFA" height={"15%"} width={"15%"} />}
                         </div>
                     </div>
                     <div className="dados__flexContainer">
-                        <button className="dados__botaoDarLance" onClick={handleDarLance}>Dar Lance!</button>
+                        {!finalizado && <button className="dados__botaoDarLance" onClick={handleDarLance}>Dar Lance!</button>}
+                        {finalizado && context.user.id === 2 && <button className="dados__botaoDarLance" onClick={handleFinalizar}>Finalizar Compra!</button>}
                         <div className="flexContainer__leiloeiro">
                             <div className="leiloeiro__box">
                                 {carregado &&
